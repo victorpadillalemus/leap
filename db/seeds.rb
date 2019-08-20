@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Creating experiences..."
+
+experience = Experience.new(
+
+    description: "So fun, omg",
+    capacity: 4,
+    price: 100,
+    category: "Gastronomy",
+    title: "Paella for two",
+    duration: 4,
+    airport_id: "BCN",
+)
+experience.save!
+
+puts "Finished seeding!"
