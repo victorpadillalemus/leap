@@ -6,6 +6,28 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+puts 'Cleaning airport database...'
+Airport.destroy_all
+
+puts 'Creating Airports'
+airport1 = Airport.create!(
+name: "Barcelona El Prat",
+address: "El Prat de Llobregat"
+  )
+puts 'Airports Finished!'
+
+puts 'Cleaning user database...'
+User.destroy_all
+
+puts 'Creating Users'
+user1 = User.create!(
+email: "ferdi@wagon.com",
+password: "password",
+first_name: "ferdi",
+last_name: "ferdison"
+  )
+puts 'Users Finished!'
+
 puts 'Cleaning experience database...'
 Experience.destroy_all
 
@@ -17,10 +39,10 @@ experience1 = Experience.create!(
     price:        130,
     category:     "Gastronomic",
     duration:     5,
-    start_time:   DateTime.new(2019, 08, 20, 11, 0, 0),
-    end_time:     DateTime.new(2019, 08, 20, 21, 0, 0),
-    remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
-    user: user1 )
+    start_time:   Time.new("2019-08-20 11:00:00 +0100"),
+    end_time:     Time.new("2019-08-20 21:00:00 +0100"),
+    #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
+    airport_id: airport1.id )
 
 experience1 = Experience.create!(
     title:        "Dinner at the Beach",
@@ -29,22 +51,22 @@ experience1 = Experience.create!(
     price:        80,
     category:     "Gastronomic",
     duration:     3,
-    start_time:   DateTime.new(2019, 08, 20, 17, 0, 0),
-    end_time:     DateTime.new(2019, 08, 20, 23, 0, 0),
-    remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
-    user: user1 )
+    start_time:   Time.new("2019-08-20 17:00:00 +0100"),
+    end_time:     Time.new("2019-08-20 23:00:00 +0100"),
+    #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
+    airport_id: airport1.id )
 
 experience1 = Experience.create!(
-    title:         "Traditional Paella Lunch"
+    title:         "Traditional Paella Lunch",
     description:   "Enjoy a traditional Spanish lunch at a selected classic Catalan style ‘macia’ or country house. This is a slow food experience and includes a short tour of the farm and an introduction to paella cooking by the head chef.",
     capacity:     9,
     price:        90,
     category:     "Gastronomic",
     duration:     3,
-    start_time:   DateTime.new(2019, 08, 20, 12, 0, 0),
-    end_time:     DateTime.new(2019, 08, 20, 17, 0, 0),
-    remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
-    user: user1 )
+    start_time:   Time.new("2019-08-20 12:00:00 +0100"),
+    end_time:     Time.new("2019-08-20 17:00:00 +0100"),
+    #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
+    airport_id: airport1.id )
 
 experience1 = Experience.create!(
     title:        "Rooftop Wine & Dine",
@@ -53,10 +75,10 @@ experience1 = Experience.create!(
     price:        130,
     category:     "Gastronomic",
     duration:     3,
-    start_time:   DateTime.new(2019, 08, 20, 18, 0, 0),
-    end_time:     DateTime.new(2019, 08, 20, 01, 0, 0),
-    remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
-    user: user1 )
+    start_time:   Time.new("2019-08-20 18:00:00 +0100"),
+    end_time:     Time.new("2019-08-20 01:00:00 +0100"),
+    #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
+    airport_id: airport1.id )
 
 experience1 = Experience.create!(
     title:        "Montserrat Monastery Tour",
@@ -65,10 +87,10 @@ experience1 = Experience.create!(
     price:        230,
     category:     "Cultural",
     duration:     8,
-    start_time:   DateTime.new(2019, 08, 20, 09, 0, 0),
-    end_time:     DateTime.new(2019, 08, 20, 21, 0, 0),
-    remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
-    user: user1 )
+    start_time:   Time.new("2019-08-20 09:00:00 +0100"),
+    end_time:     Time.new("2019-08-20 21:00:00 +0100"),
+    #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
+    airport_id: airport1.id )
 
 experience1 = Experience.create!(
     title:        "Flamenco show & Dinner",
@@ -77,10 +99,10 @@ experience1 = Experience.create!(
     price:        150,
     category:     "Cultural, Gastronomic",
     duration:     5,
-    start_time:   DateTime.new(2019, 08, 20, 17, 0, 0),
-    end_time:     DateTime.new(2019, 08, 20, 22, 0, 0),
-    remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
-    user: user1 )
+    start_time:   Time.new("2019-08-20 17:00:00 +0100"),
+    end_time:     Time.new("2019-08-20 22:00:00 +0100"),
+    #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
+    airport_id: airport1.id )
 
 experience1 = Experience.create!(
     title:        "Brunch in the city",
@@ -89,10 +111,10 @@ experience1 = Experience.create!(
     price:        95,
     category:     "Gastronomic",
     duration:     4,
-    start_time:   DateTime.new(2019, 08, 20, 09, 0, 0),
-    end_time:     DateTime.new(2019, 08, 20, 14, 0, 0),
-    remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
-    user: user1 )
+    start_time:   Time.new("2019-08-20 09:00:00 +0100"),
+    end_time:     Time.new("2019-08-20 14:00:00 +0100"),
+    #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
+    airport_id: airport1.id )
 
 experience1 = Experience.create!(
     title:        "Fast-track Sagrada Familia Tourr",
@@ -101,10 +123,10 @@ experience1 = Experience.create!(
     price:        140,
     category:     "Cultural",
     duration:     4,
-    start_time:   DateTime.new(2019, 08, 20, 10, 0, 0),
-    end_time:     DateTime.new(2019, 08, 20, 18, 0, 0),
-    remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
-    user: user1 )
+    start_time:   Time.new("2019-08-20 10:00:00 +0100"),
+    end_time:     Time.new("2019-08-20 18:00:00 +0100"),
+    #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
+    airport_id: airport1.id )
 
 experience1 = Experience.create!(
     title:        "Local Wine & Cava with Tapas at a Vineyard",
@@ -113,9 +135,9 @@ experience1 = Experience.create!(
     price:        140,
     category:     "Gastronomic",
     duration:     4,
-    start_time:   DateTime.new(2019, 08, 20, 10, 0, 0),
-    end_time:     DateTime.new(2019, 08, 20, 18, 0, 0),
-    remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
-    user: user1 )
+    start_time:   Time.new("2019-08-20 10:00:00 +0100"),
+    end_time:     Time.new("2019-08-20 18:00:00 +0100"),
+    #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
+    airport_id: airport1.id )
 
 puts 'Finished!'
