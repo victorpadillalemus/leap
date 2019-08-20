@@ -32,7 +32,8 @@
   margin-top: 20px;
 
   .card-big {
-    margin-bottom: 20px;
+    // margin-bottom: 100px;
+    // margin-right: 10px;
     height: 380px;
     width: 100%;
     color: white;
@@ -41,7 +42,6 @@
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     border-radius: 5px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    margin-right: 10px;
   }
 
 
@@ -54,6 +54,16 @@
     padding: 10px;
     height: 30%;
     text-align: center;
+    color: black;
+    background-color: grey;
+  }
+  .card-caption-top {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card-caption-bottom {
+    display: flex;
+    padding-right: 50px;
   }
 }
 
