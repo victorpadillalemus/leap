@@ -5,15 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-puts 'Cleaning airport database...'
-Airport.destroy_all
 
-puts 'Creating Airports'
-airport1 = Airport.create!(
-name: "Barcelona El Prat",
-address: "El Prat de Llobregat"
-  )
-puts 'Airports Finished!'
 
 puts 'Cleaning user database...'
 User.destroy_all
@@ -23,9 +15,20 @@ user1 = User.create!(
 email: "ferdi@wagon.com",
 password: "password",
 first_name: "ferdi",
-last_name: "ferdison"
+last_name: "ferdison",
+admin: true
   )
 puts 'Users Finished!'
+
+puts 'Cleaning airport database...'
+Airport.destroy_all
+
+puts 'Creating Airports'
+airport1 = Airport.create!(
+name: "Barcelona El Prat",
+address: "El Prat de Llobregat"
+  )
+puts 'Airports Finished!'
 
 puts 'Cleaning experience database...'
 Experience.destroy_all
