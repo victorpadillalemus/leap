@@ -1,4 +1,5 @@
 class Experience < ApplicationRecord
   belongs_to :airport
   has_many :experience_photos
+  has_many :favorites
 end
