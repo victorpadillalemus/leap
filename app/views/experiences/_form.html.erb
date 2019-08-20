@@ -1,0 +1,44 @@
+<div class=“container-new-experience-form”>
+ <%= simple_form_for(@experience) do |f| %>
+   <%= f.error_notification %>
+   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+   <div class=“form-inputs”>
+     <%= f.input :address %>
+   </div>
+   <div class=“form-inputs”>
+     <%= f.input :title %>
+   </div>
+   <div class=“form-inputs”>
+     <%= f.input :description %>
+   </div>
+   <div class=“form-inputs”>
+     <%= f.input :capacity, collection: 1..16, prompt: “Guests”, selected: 1 %>
+   </div>
+   <div class=“form-inputs”>
+     <%= f.input :price %>
+   </div>
+   <div class=“form-inputs”>
+     <%= f.input :category %>
+   </div>
+   <div class=“form-inputs”>
+     <%= f.input :meeting_point %>
+   </div>
+   <div class=“form-inputs”>
+     <%= f.input :start_time %>
+   </div>
+   <div class=“form-inputs”>
+     <%= f.input :end_time %>
+   </div>
+   <div class=“form-inputs”>
+     <%= f.input :airport_id %>
+   </div>
+   <div class=“form-inputs”>
+     <%= f.input :duration, collection: 1..10, prompt: “Guests”, selected: 1 %>
+   </div>
+
+   <div class=“form-actions”>
+     <%= f.button :submit, class: “btn btn-submit” %>
+   </div>
+ <% end %>
+ <%= link_to ‘Back’, experiences_path, class: “btn btn-back mt-3” %>
+</div>
