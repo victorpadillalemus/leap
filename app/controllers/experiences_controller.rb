@@ -11,12 +11,11 @@ class ExperiencesController < ApplicationController
 
   def create
     @experience = Experience.new(experience_strong_params)
-    @experience.user = current_user
+    # @experience.user = current_user
     if @experience.save
       redirect_to experience_path(@experience)
     else
       render :new
-
     end
   end
 
