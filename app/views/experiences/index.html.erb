@@ -1,10 +1,23 @@
-<div class=“cards”>
-   <% @experiences.each do |e| %>
-    <%= cl_image_tag e.photo %>
-    <%= link_to e.title, experience_path(e) %>
-    <%= e.description %>
-    <%= e.category %>
-    <%= e.duration %>
-    <%= e.price %>
-   <% end %>
+<div class="experiences-header">
+  <h4>See all experiences</h4>
+  <h6>Friday, Aug. 20th</h6>
+</div>
+
+<h6>Categories</h6>
+
+<div class="scrolling-card-container">
+    <div class="card-small" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('paella3.jpg') %>);">Gastronomy
+    </div>
+
+    <div class="card-small" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('romantic.jpeg') %>);">Romantic
+    </div>
+
+    <div class="card-small" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('family.jpeg') %>);">Family
+    </div>
+
+    <div class="card-small" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('cultural.jpeg') %>);">Cultural
+    </div>
+
+    <div class="card-small" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('nightlife.jpeg') %>);">Nightlife
+    </div>
 </div>
