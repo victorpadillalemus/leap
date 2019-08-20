@@ -1,0 +1,59 @@
+.experiences-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.horizontal-scrolling-card-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  margin: 2px;
+
+  .card-small {
+    background-size: cover;
+    background-position: center;
+    height: 240px;
+    width: 178px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    margin-right: 10px;
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.vertical-scrolling-card-container {
+  margin-top: 20px;
+
+  .card-big {
+    margin-bottom: 20px;
+    height: 380px;
+    width: 100%;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    margin-right: 10px;
+  }
+
+
+  .card-image {
+    height: 70%;
+    background-size: cover;
+    background-position: center;
+  }
+  .card-caption{
+    padding: 10px;
+    height: 30%;
+    text-align: center;
+  }
+}
+
