@@ -1,19 +1,22 @@
 class ExperiencesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
+  # skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @experiences = Experience.all
+    # @experiences = Experience.all
+    @experiences = policy_scope(Experience)
   end
 
   def new
     @experience = Experience.new
+    authorize(@experience)
   end
 
   def create
     @experience = Experience.new(experience_strong_params)
-    @experience.user = current_user
+    authorize(@experience)
     if @experience.save
-      redirect_to experience_path(@experience)
+      redirect_to @experience, notice: 'Experience was successfully created.'
     else
       render :new
 
@@ -21,22 +24,31 @@ class ExperiencesController < ApplicationController
   end
 
   def show
-
   end
 
   def edit
   end
 
   def update
+    if @experience.update(experience_strong_params)
+      redirect_to @experience, notice: 'Restaurant was successfully updated.'
+    else
+      render :edit
+    end
   end
 
-  def delete
+  def destroy
+    @experience.destroy
   end
 
   private
 
+  def set_experience
+    @experience = Experience.find(params[:id])
+    authorize(@experience)
+  end
+
   def experience_strong_params
     params.require(:experience).permit(:description, :capacity, :price, :start_time, :end_time, :category, :title, :duration, :meeting_point)
   end
-
 end
