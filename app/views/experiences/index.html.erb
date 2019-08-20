@@ -1,0 +1,13 @@
+<div class=“cards”>
+   <% @experiences.each do |e| %>
+    <%= cl_image_tag e.photo %>
+    <%= link_to e.title, experience_path(e) %>
+    <%= e.description %>
+    <%= e.category %>
+    <%= e.duration %>
+    <%= e.meeting_point %>
+    <%= e.start_time %>
+    <%= e.end_time %>
+    <%= e.price %>
+   <% end %>
+</div>

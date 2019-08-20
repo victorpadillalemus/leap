@@ -1,2 +1,13 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="background"
+    style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('leap_background.jpeg') %>);">
+  <div class="hp-container">
+    <!-- space -->
+    <h1 class="slogan">Love Your Layover</h1>
+
+    <div class="search-block">
+      <input type="text" placeholder="Select Your Airport" class="search-bar">
+      <%= link_to "Search", "#", class: "primary-button" %>
+    </div>
+  </div>
+
+</div>
