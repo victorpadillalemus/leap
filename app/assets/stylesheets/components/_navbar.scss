@@ -2,15 +2,23 @@ body {
   overflow-x: hidden;
 }
 
+.nav-transparent {
+  position: fixed !important;
+  top: 0px !important;
+  width: 100% !important;
+  background: none !important;
+}
+
 nav{
   display: flex !important;
   justify-content: space-between;
   align-items: center;
   min-height: 8vh;
   background-color: white;
-  position: sticky;
-  top: 0;
-  padding: 5px;
+  position: -webkit-sticky;
+  position: fixed;
+  top: 0px;
+  width: 100%;
 }
 
 .logo{

@@ -1,5 +1,5 @@
 class ExperiencesController < ApplicationController
-  before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
+  # before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
   # skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
@@ -24,6 +24,8 @@ class ExperiencesController < ApplicationController
   end
 
   def show
+    @experience = Experience.find(params[:id])
+    authorize(@experience)
   end
 
   def edit
