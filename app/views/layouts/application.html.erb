@@ -12,11 +12,8 @@
     <%= stylesheet_pack_tag 'application'%>
   </head>
   <body>
-
     <%= render "shared/navbar" unless home_page? %>
-
     <%= yield %>
-    <!-- </div> -->
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
     <p class="notice"><%= notice %></p>
