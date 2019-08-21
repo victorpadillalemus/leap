@@ -4,6 +4,9 @@ class ExperiencesController < ApplicationController
 
   def index
     # @experiences = Experience.all
+    session[:start_time] = params[:filter][:start_time]
+    session[:end_time] = params[:filter][:end_time]
+    session[:capacity] = params[:filter][:capacity]
     @experiences = policy_scope(Experience)
   end
 
