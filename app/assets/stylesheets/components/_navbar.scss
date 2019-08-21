@@ -1,12 +1,101 @@
-.navbar-lewagon {
+body {
+  overflow-x: hidden;
+}
+
+nav{
+  display: flex !important;
   justify-content: space-between;
-  background: white;
+  align-items: center;
+  min-height: 8vh;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  padding: 5px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.logo{
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 22px;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.nav-links{
+  // display: flex;
+  // justify-content: space-around;
+  width: 40%;
+  list-style: none;
 }
+
+.nav-links a{
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  color: black;
+}
+
+.burger{
+  cursor: pointer;
+}
+
+.burger .line1{
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.burger .line2{
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-links{
+  position: absolute;
+  right: 0px;
+  height: 92vh;
+  top: 8vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  transform: translateX(100%);
+  transition: transform 1s ease-in;
+}
+
+.nav-links li {
+  opacity: 0;
+}
+
+.nav-active{
+  transform: translateX(0%);
+}
+
+
+  @keyframes navLinkFade{
+    from{
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to{
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+  }
+  .toggle .line2{
+    opacity: 0;
+  }
+  .toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+  }
+

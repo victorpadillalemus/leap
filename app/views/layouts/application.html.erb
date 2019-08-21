@@ -8,14 +8,16 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+    <%= stylesheet_pack_tag 'application'%>
   </head>
   <body>
+
+    <%= render "shared/navbar" unless home_page? %>
     <p class="notice"><%= notice %></p>
-    <p class="aler"><%= alert %></p>
-    <div class="container">
+    <p class="alert"><%= alert %></p>
+
     <%= yield %>
-    </div>
+    <!-- </div> -->
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
