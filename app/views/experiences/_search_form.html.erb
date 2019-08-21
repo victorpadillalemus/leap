@@ -1,0 +1,8 @@
+<%= form_tag experiences_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "search-bar",
+          placeholder: "which is your city-airport layover?"
+        %>
+        <%= submit_tag "Search", class: "primary-button" %>
+      <% end %>
