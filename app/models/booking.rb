@@ -2,6 +2,8 @@ class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :experience
   has_many :reviews, dependent: :destroy
+  has_many :booking_attributes, dependent: :destroy
+  has_many :attributes, through: :booking_attributes, dependent: :destroy
   after_create :set_total_price
 
   def set_total_price
