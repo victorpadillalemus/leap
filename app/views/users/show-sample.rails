@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-3" id="profile-card">
+      <div class="avatar-center">
+
+        <br>
+        <%= link_to 'update photo'  %>
+      </div>
+      <hr>
+      <p><i class="fas fa-comment-alt"></i> <%= "27 reviews" %> </p>
+      <p><i class="fas fa-check-square"></i> <%= "Verified" %> </p>
+      <hr>
+      <p><%= @current_user.first_name %> provided: </p>
+      <p><i class="fas fa-check"></i> Government ID</p>
+      <p><i class="fas fa-check"></i> Selfie </p>
+      <p><i class="fas fa-check"></i> E-mail Address </p>
+      <p><i class="fas fa-check"></i> Phone number </p>
+    </div>
+
+    <div class="col-2">
+
+    </div>
+
+    <div class="col-5">
+      <h2>Hi, I'm  <%= @current_user.first_name %></h2>
+        <div class="edit-profile-btn">
+          <p>Joined in 2019</p> <%= link_to "Edit Profile", edit_user_registration_path  %>
+        </div>
+          <p class="description-style">
+            My name is <%= @current_user.first_name %>, A machine dies around the copyright luck. A mumble sees every sworn reminder. The algebra glows! Any arch retracts inside a farce. The bargain stake digests the spectrum near the supported answer. The angel cautions near a witch. A geometry discriminates throughout the hand! The melody cries the coherent discipline. Another dependent fruit coughs. A budget fails.
+          </p>
+          <hr>
+          <p><i class="fas fa-envelope"></i> Your current email is: <em><%= @current_user.email %></em></p>
+          <hr>
+          <p><i class="fas fa-home"> </i> Lives in Seattle, WA</p>
+          <p><i class="fas fa-comments"></i> Speaks: English, Gibberish, & Latin</p>
+          <p><i class="fas fa-briefcase"></i> Work: Paint Drying Watcher </p>
+
+    </div>
+  </div>
+</div>
