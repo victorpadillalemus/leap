@@ -1,9 +1,23 @@
-class ExperiencesController < ApplicationController
-  # before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
+  before_action :set_experience, only: [:show, :edit, :update, :destroy]
   # skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_after_action :verify_authorized, only: [:filter]
 
   def index
     # @experiences = Experience.all
+    # session[:start_time] = params[:filter][:start_time]
+    # session[:end_time] = params[:filter][:end_time]
+    # session[:capacity] = params[:filter][:capacity]
+    # if params[:query].present?
+    #   sql_query = " \
+    #     movies.title @@ :query \
+    #     OR movies.syllabus @@ :query \
+    #     OR directors.first_name @@ :query \
+    #     OR directors.last_name @@ :query \
+    #   "
+    #   @movies = Movie.joins(:director).where(sql_query, query: "%#{params[:query]}%")
+    # else
+    #   @movies = Movie.all
+    # end
     @experiences = policy_scope(Experience)
   end
 
@@ -26,6 +40,9 @@ class ExperiencesController < ApplicationController
   def show
     @experience = Experience.find(params[:id])
     authorize(@experience)
+  end
+
+  def filter
   end
 
   def edit
