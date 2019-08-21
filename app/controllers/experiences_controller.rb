@@ -1,6 +1,7 @@
 class ExperiencesController < ApplicationController
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
   # skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_after_action :verify_authorized, only: [:filter]
 
   def index
     # @experiences = Experience.all
@@ -24,6 +25,9 @@ class ExperiencesController < ApplicationController
   end
 
   def show
+  end
+
+  def filter
   end
 
   def edit
