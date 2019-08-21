@@ -1,3 +1,4 @@
+class ExperiencesController < ApplicationController
   before_action :set_experience, only: [:show, :edit, :update, :destroy]
   # skip_before_action :authenticate_user!, only: [:index, :show]
   skip_after_action :verify_authorized, only: [:filter]
@@ -38,8 +39,6 @@
   end
 
   def show
-    @experience = Experience.find(params[:id])
-    authorize(@experience)
   end
 
   def filter
