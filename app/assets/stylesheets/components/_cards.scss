@@ -1,13 +1,20 @@
 .experiences-header {
   display: flex;
   justify-content: space-between;
+  background-color: white;
 }
+
+// .experiences-subheader {
+//   background-color: white;
+//   margin: 0;
+// }
 
 .horizontal-scrolling-card-container {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
   margin: 2px;
+  background-color: white;
 
   .card-small {
     background-size: cover;
@@ -30,6 +37,7 @@
 
 .vertical-scrolling-card-container {
   margin-top: 20px;
+  margin: 2px;
 
   .card-big {
     // margin-bottom: 100px;
@@ -55,7 +63,7 @@
     height: 30%;
     text-align: center;
     color: black;
-    background-color: grey;
+    background-color: white;
   }
   .card-caption-top {
     display: flex;

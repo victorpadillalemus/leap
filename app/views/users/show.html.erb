@@ -1,0 +1,29 @@
+<div class="profile-container">
+  <div class="profile-header">
+    <h4>Hi, LeeRoy <%#= @current_user.first_name %></h2>
+    <p><i class="fas fa-envelope"></i> You're currently logged in with:
+    <br>
+    <em><%= @current_user.email %></em></p>
+    <hr>
+  </div>
+  <div class="profile-section2">
+    <h4>You have been on:</h4>
+    <p><i class="fas fa-plane-departure"></i></i> <%= "3 leaps" %> </p>
+    <%= link_to "See Past Leaps" %>
+    <hr>
+  </div>
+  <div class="profile-section3">
+    <h4>About:</h4>
+    My name is Leeroy <%#= @current_user.first_name %>, I like kissin' my mama. Taking big fat copenhagen dips, goin' fishin, washin' my John Deere tractor, and tryin' to get with your sister. Yeehaw!
+    <hr>
+  </div>
+  <div class="profile-section4">
+    <p><i class="fas fa-home"> </i> Lives in Seattle, WA</p>
+    <p><i class="fas fa-comments"></i> Speaks: English, Gibberish, & Latin</p>
+    <p><i class="fas fa-briefcase"></i> Work: Paint Drying Watcher </p>
+    <hr>
+  </div>
+  <div class="edit-profile-btn">
+    <%= link_to "Edit Profile", edit_user_registration_path  %>
+  </div>
+</div>

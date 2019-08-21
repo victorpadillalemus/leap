@@ -1,1 +1,23 @@
-_navbar.html.erb
+<nav>
+    <div class="logo">
+      <p> < </p>
+    </div>
+
+      <ul class="nav-links">
+        <li>
+          <% if user_signed_in? %>
+            <%= link_to 'Profile', user_path(current_user) %>
+          <% else %>
+            <%= link_to "Log in", user_session_path %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+        </li>
+      </ul>
+
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+      </div>
+</nav>
