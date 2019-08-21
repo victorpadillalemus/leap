@@ -7,6 +7,11 @@ class ExperiencePolicy < ApplicationPolicy
   def create?
     return true
   end
+
+  def filter?
+    true
+  end
+
   def new?
     true
   end
