@@ -1,0 +1,19 @@
+<div class=“container-new-experience-form”>
+ <%= simple_form_for[@booking, @review] do |f| %>
+   <%= f.error_notification %>
+   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+   <div class=“form-inputs”>
+     <%= f.input :content %>
+   </div>
+   <div class=“form-inputs”>
+     <%= f.input :rating, collection: 1..5, prompt: "Stars", selected: 1 %>
+   </div>
+   <div class=“form-actions”>
+     <%= f.button :submit, class: "btn btn-submit" %>
+   </div>
+ <% end %>
+ <%= link_to 'Back', experiences_path, class: "btn btn-back mt-3" %>
+</div>
+
+
+<!-- Check the dashboard path once is implemented -->

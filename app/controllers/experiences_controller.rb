@@ -1,12 +1,12 @@
 class ExperiencesController < ApplicationController
-  before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
+  before_action :set_experience, only: [:show, :edit, :update, :destroy]
   # skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     # @experiences = Experience.all
-    session[:start_time] = params[:filter][:start_time]
-    session[:end_time] = params[:filter][:end_time]
-    session[:capacity] = params[:filter][:capacity]
+    # session[:start_time] = params[:filter][:start_time]
+    # session[:end_time] = params[:filter][:end_time]
+    # session[:capacity] = params[:filter][:capacity]
     @experiences = policy_scope(Experience)
   end
 
