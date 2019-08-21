@@ -1,13 +1,13 @@
 .experiences-header {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   background-color: white;
+  margin-top: 60px;
 }
 
-// .experiences-subheader {
-//   background-color: white;
-//   margin: 0;
-// }
+.experiences-subheader {
+}
 
 .horizontal-scrolling-card-container {
   display: flex;

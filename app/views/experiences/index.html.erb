@@ -1,10 +1,11 @@
 <div class="experiences-header">
   <h4>See all experiences</h4>
-  <h6>Friday, Aug. 20th</h6>
+  <p>Friday, Aug. 20th</p>
 </div>
 
 <div class="experiences-subheader">
   <h6>Categories</h6>
+  <p>Did this so I could push</p>
 </div>
 
 <div class="horizontal-scrolling-card-container">
@@ -23,7 +24,6 @@
     <div class="card-small" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('nightlife.jpeg') %>);">Nightlife
     </div>
 </div>
-
 <div class="experiences-subheader">
   <h6>Top ranked</h6>
 </div>
@@ -35,10 +35,10 @@
       </div>
 
       <div class="card-caption">
-        <div class="card-caption-top">
-          <p><%= e.title %></p>
-          <p><i class="fas fa-euro-sign"></i><%= e.price %></p>
-        </div>
+      <div class="card-caption-top">
+        <%= link_to e.title, experience_path(e) %>
+        <p><i class="fas fa-euro-sign"></i><%= e.price %></p>
+        
         <div class="card-caption-bottom">
           <p><i class="fas fa-users"></i><%= e.capacity %></p>
           <p><i class="fas fa-history"></i><%= e.duration %></p>
