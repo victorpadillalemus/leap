@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :experiences do
-    resources :favorites, only:[:create]
+    resources :favorites, only:[:index, :create, :destroy]
   end
   devise_for :users
   resources :users, only:[:show]
