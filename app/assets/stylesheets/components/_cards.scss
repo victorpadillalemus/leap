@@ -50,6 +50,7 @@
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     border-radius: 5px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    text-decoration: none;
   }
 
 
@@ -67,12 +68,16 @@
     overflow-wrap: break-word;
   }
   .card-caption-top {
+    text-decoration: none;
     display: flex;
     justify-content: space-between;
   }
   .card-caption-bottom {
     display: flex;
     padding-right: 50px;
+  }
+  .link-show {
+    text-decoration: none;
   }
 }
 
