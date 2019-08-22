@@ -20,7 +20,6 @@
              <%= f.input :departure , id: "demo2" %>
            </div>
       </div>
-  <% end %>
   <div class="passenger-counter d-flex row h-100">
     <h4>Passengers</h4>
     <span class="minus">-</span>
@@ -30,7 +29,7 @@
   </div>
 
   <input type="hidden" value="<%= params[:home_search][:airport] %>" name="search[airport]">
-                                                                                           
+
   <%= f.submit "Search", class: "secondary-button" %>
   <% end %>
 
