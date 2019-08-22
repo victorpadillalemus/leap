@@ -31,7 +31,8 @@
 <div class="vertical-scrolling-card-container">
   <% @experiences.each do |e| %>
     <div class="card-big">
-      <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('sagrada_familia.jpeg') %>);">
+      <div class="card-image">
+        <%= cl_image_tag e.photo %>
       </div>
 
       <div class="card-caption">

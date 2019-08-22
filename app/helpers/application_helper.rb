@@ -4,6 +4,6 @@ module ApplicationHelper
   end
 
   def nav_transparent?
-    params[:controller] == 'pages' && params[:action] == 'show'
+    params[:controller] == 'experiences' && params[:action] == 'show'
   end
 end

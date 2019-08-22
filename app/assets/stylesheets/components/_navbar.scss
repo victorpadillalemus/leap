@@ -3,6 +3,10 @@ body {
   background: $white !important;
 }
 
+.transparent {
+  background: transparent !important;
+}
+
 nav{
   display: flex !important;
   justify-content: space-between;
@@ -16,7 +20,7 @@ nav{
 
 .logo{
   color: black;
-text-transform: uppercase;
+  text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 22px;
 }
@@ -27,9 +31,7 @@ text-transform: uppercase;
   width: 40%;
   list-style: none;
 }
-.transparent {
-  background-color: yellow !important;
-}
+
 
 .nav-links a{
   text-decoration: none;
