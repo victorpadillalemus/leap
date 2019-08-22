@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2019_08_20_110617) do
-=======
-ActiveRecord::Schema.define(version: 2019_08_20_145406) do
->>>>>>> ee5b823bf201fd0a9af9f4e6889f138a28015e2b
+ActiveRecord::Schema.define(version: 2019_08_22_124748) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,7 +35,6 @@ ActiveRecord::Schema.define(version: 2019_08_20_145406) do
   create_table "experiences", force: :cascade do |t|
     t.text "description"
     t.integer "capacity"
-    t.integer "price"
     t.string "category"
     t.string "title"
     t.integer "duration"
@@ -49,6 +44,8 @@ ActiveRecord::Schema.define(version: 2019_08_20_145406) do
     t.bigint "airport_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "price_cents", default: 0, null: false
+    t.string "price_currency", default: "EUR", null: false
     t.index ["airport_id"], name: "index_experiences_on_airport_id"
   end
 

@@ -17,6 +17,8 @@ gem 'webpacker'
 gem  'devise'
 gem 'geocoder'
 gem 'pundit'
+gem 'money-rails'
+gem 'stripe'
 
 
 group :development do
