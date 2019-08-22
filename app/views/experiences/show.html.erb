@@ -2,16 +2,15 @@
 
   <div class="show-page-card">
     <div class="show-image"
-        style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('sagrada_familia.jpeg') %>);">
+        style="background-image: linear-gradient(180deg, #000000 0%, rgba(49, 69, 242, 0.21) 50%), url(
+        <%= @experience.experience_photos.first.photo %>);">
     </div>
 
     <div class="show-page-caption">
       <h3><%= @experience.title %></h3>
-      <p><%= @experience.category %></p>
-      <p> 4.9 stars</p>
+<!--       <p><%= @experience.category %></p> -->
+      <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 4.9 </p>
       <hr>
-    </div>
-    <div>
       <p><%= @experience.description %></p>
     </div>
   </div>
@@ -19,7 +18,7 @@
 </div>
 
 <div class="footer">
-  <div class="book-button">
-    <%= link_to "Book Now", "#" %>
+<!--   <div class="book-button"> -->
+    <%= link_to "Book Now", "#", class: "primary-button" %>
   </div>
 </div>

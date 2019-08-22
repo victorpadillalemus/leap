@@ -31,17 +31,25 @@
 <div class="vertical-scrolling-card-container">
   <% @experiences.each do |e| %>
     <div class="card-big">
-      <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('sagrada_familia.jpeg') %>);">
+      <div class="card-image">
+        <% if e.experience_photos.present? %>
+          <% e.experience_photos.each do |p| %>
+            <%= cl_image_tag p.photo %>
+          <% end %>
+        <% end %>
       </div>
 
       <div class="card-caption">
         <div class="card-caption-top">
-          <p class="link-show"><%= link_to e.title, e %></p>
-          <p><i class="fas fa-euro-sign"></i><%= e.price %></p>
+          <div class="link-show"><%= link_to e.title, e %></div>
+          <div><i class="fas fa-euro-sign"></i><%= e.price %></div>
+        </div>
+        <div class="card-caption-middle">
+          <div class="small-margin-bottom"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5.0 </div>
         </div>
         <div class="card-caption-bottom">
-          <p><i class="fas fa-users"></i><%= e.capacity %></p>
-          <p><i class="fas fa-history"></i><%= e.duration %></p>
+          <div class="small-margin-right"><i class="fas fa-users"></i><%= e.capacity %></div>
+          <div><i class="fas fa-history"></i><%= e.duration %></div>
         </div>
       </div>
     </div>

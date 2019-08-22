@@ -1,12 +1,17 @@
 body {
   overflow-x: hidden;
+  background: $white !important;
 }
 
-nav{
+.transparent {
+  background: transparent !important;
+}
+
+nav {
   display: flex !important;
   justify-content: space-between;
-  align-items: center;
-  min-height: 8vh;
+  align-items: flex-start;
+  min-height: 10px;
   background-color: white;
   position: sticky;
   top: 0;
@@ -27,7 +32,8 @@ nav{
   list-style: none;
 }
 
-.nav-links a{
+
+.nav-links a {
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: bold;
@@ -40,19 +46,23 @@ nav{
 }
 
 .burger .line1{
-  width: 25px;
-  height: 2px;
-  background-color: black;
-  margin: 5px;
-  transition: all 0.3s ease;
+    position: absolute;
+    left: 89%;
+    right: 3.86%;
+    top: 36.07%;
+    bottom: 63.93%;
+    border: 1px solid #8F8F8F;
+    transition: all 0.3s ease;
 }
 
 .burger .line2{
-  width: 20px;
-  height: 2px;
-  background-color: black;
-  margin: 5px;
-  transition: all 0.3s ease;
+    position: absolute;
+    left: 91%;
+    right: 3.86%;
+    top: 50%;
+    bottom: 50%;
+    border: 1px solid #8F8F8F;
+    transition: all 0.3s ease;
 }
 
 .nav-links{

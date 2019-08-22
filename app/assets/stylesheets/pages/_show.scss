@@ -1,22 +1,21 @@
 .experience-show-container {
   margin: 0 auto;
-  height: 100vh;
 }
 
 
 .show-page-card {
-  height: 100vh;
+  margin-bottom: 200px;
+}
 
   .show-image {
-    height: 75vh;
+    height: 70vh;
     background-size: cover;
     background-position: center;
   }
 
   .show-page-caption {
-    height: 20vh;
+    margin: 8px;
   }
-}
 
 .footer {
   position: fixed;
