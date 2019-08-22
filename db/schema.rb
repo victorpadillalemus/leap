@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_21_134413) do
+ActiveRecord::Schema.define(version: 2019_08_21_125009) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,23 +22,6 @@ ActiveRecord::Schema.define(version: 2019_08_21_134413) do
     t.datetime "updated_at", null: false
     t.float "latitude"
     t.float "longitude"
-  end
-
-  create_table "attributes", force: :cascade do |t|
-    t.string "attribute_name"
-    t.integer "ppu"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "booking_attributes", force: :cascade do |t|
-    t.integer "quantity"
-    t.bigint "booking_id"
-    t.bigint "attribute_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["attribute_id"], name: "index_booking_attributes_on_attribute_id"
-    t.index ["booking_id"], name: "index_booking_attributes_on_booking_id"
   end
 
   create_table "bookings", force: :cascade do |t|
@@ -116,8 +99,6 @@ ActiveRecord::Schema.define(version: 2019_08_21_134413) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "booking_attributes", "attributes"
-  add_foreign_key "booking_attributes", "bookings"
   add_foreign_key "bookings", "experiences"
   add_foreign_key "bookings", "users"
   add_foreign_key "experience_photos", "experiences"
