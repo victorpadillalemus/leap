@@ -20,7 +20,8 @@ admin: true
   )
 puts 'Users Finished!'
 
-puts 'Cleaning airport database...'
+puts 'Cleaning database...'
+Experience.destroy_all
 Airport.destroy_all
 
 puts 'Creating Airports'
@@ -30,8 +31,7 @@ address: "El Prat de Llobregat"
   )
 puts 'Airports Finished!'
 
-puts 'Cleaning experience database...'
-Experience.destroy_all
+
 
 puts 'Creating experiences'
 experience1 = Experience.create!(
@@ -43,8 +43,13 @@ experience1 = Experience.create!(
     duration:     5,
     start_time:   Time.new("2019-08-20 11:00:00 +0100"),
     end_time:     Time.new("2019-08-20 21:00:00 +0100"),
-    #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
-    airport_id: airport1.id )
+    # remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477378/leap/tapas_walking_tour_icrgxn.jpg",
+    airport: airport1)
+
+experience_photo1 = ExperiencePhoto.create!(
+  experience: experience1,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477378/leap/tapas_walking_tour_icrgxn.jpg"
+  )
 
 experience1 = Experience.create!(
     title:        "Dinner at the Beach",
@@ -55,8 +60,13 @@ experience1 = Experience.create!(
     duration:     3,
     start_time:   Time.new("2019-08-20 17:00:00 +0100"),
     end_time:     Time.new("2019-08-20 23:00:00 +0100"),
-    #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
+    # remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477273/leap/beach_dinner_ylocub.jpg",
     airport_id: airport1.id )
+
+experience_photo2 = ExperiencePhoto.create!(
+  experience: experience1,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477273/leap/beach_dinner_ylocub.jpg"
+  )
 
 experience1 = Experience.create!(
     title:         "Traditional Paella Lunch",
@@ -67,8 +77,13 @@ experience1 = Experience.create!(
     duration:     3,
     start_time:   Time.new("2019-08-20 12:00:00 +0100"),
     end_time:     Time.new("2019-08-20 17:00:00 +0100"),
-    #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
+    # remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477329/leap/paella_j86eqn.jpg",
     airport_id: airport1.id )
+
+experience_photo3 = ExperiencePhoto.create!(
+  experience: experience1,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477329/leap/paella_j86eqn.jpg"
+  )
 
 experience1 = Experience.create!(
     title:        "Rooftop Wine & Dine",
@@ -79,8 +94,13 @@ experience1 = Experience.create!(
     duration:     3,
     start_time:   Time.new("2019-08-20 18:00:00 +0100"),
     end_time:     Time.new("2019-08-20 01:00:00 +0100"),
-    #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
+    # remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477345/leap/rooftop_wine_r4czra.jpg",
     airport_id: airport1.id )
+
+experience_photo4 = ExperiencePhoto.create!(
+  experience: experience1,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477345/leap/rooftop_wine_r4czra.jpg"
+  )
 
 experience1 = Experience.create!(
     title:        "Montserrat Monastery Tour",
@@ -91,8 +111,13 @@ experience1 = Experience.create!(
     duration:     8,
     start_time:   Time.new("2019-08-20 09:00:00 +0100"),
     end_time:     Time.new("2019-08-20 21:00:00 +0100"),
-    #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
+    # remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477316/leap/monastery_kgt9fv.jpg",
     airport_id: airport1.id )
+
+experience_photo5 = ExperiencePhoto.create!(
+  experience: experience1,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477316/leap/monastery_kgt9fv.jpg"
+  )
 
 experience1 = Experience.create!(
     title:        "Flamenco show & Dinner",
@@ -103,8 +128,13 @@ experience1 = Experience.create!(
     duration:     5,
     start_time:   Time.new("2019-08-20 17:00:00 +0100"),
     end_time:     Time.new("2019-08-20 22:00:00 +0100"),
-    #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
+    # remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477302/leap/flamenco_awdufl.jpg",
     airport_id: airport1.id )
+
+experience_photo6 = ExperiencePhoto.create!(
+  experience: experience1,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477302/leap/flamenco_awdufl.jpg"
+  )
 
 experience1 = Experience.create!(
     title:        "Brunch in the city",
@@ -115,8 +145,13 @@ experience1 = Experience.create!(
     duration:     4,
     start_time:   Time.new("2019-08-20 09:00:00 +0100"),
     end_time:     Time.new("2019-08-20 14:00:00 +0100"),
-    #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
+    # remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477290/leap/brunch_qsyyzr.jpg",
     airport_id: airport1.id )
+
+experience_photo7 = ExperiencePhoto.create!(
+  experience: experience1,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477290/leap/brunch_qsyyzr.jpg"
+  )
 
 experience1 = Experience.create!(
     title:        "Fast-track Sagrada Familia Tourr",
@@ -127,8 +162,13 @@ experience1 = Experience.create!(
     duration:     4,
     start_time:   Time.new("2019-08-20 10:00:00 +0100"),
     end_time:     Time.new("2019-08-20 18:00:00 +0100"),
-    #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
+    # remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477364/leap/sagrada_familia_xpldrt.jpg",
     airport_id: airport1.id )
+
+experience_photo8 = ExperiencePhoto.create!(
+  experience: experience1,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477364/leap/sagrada_familia_xpldrt.jpg"
+  )
 
 experience1 = Experience.create!(
     title:        "Local Wine & Cava with Tapas at a Vineyard",
@@ -139,7 +179,12 @@ experience1 = Experience.create!(
     duration:     4,
     start_time:   Time.new("2019-08-20 10:00:00 +0100"),
     end_time:     Time.new("2019-08-20 18:00:00 +0100"),
-    #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
+    # remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477392/leap/vineyard_gpxvvz.png",
     airport_id: airport1.id )
+
+experience_photo9 = ExperiencePhoto.create!(
+  experience: experience1,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477392/leap/vineyard_gpxvvz.png"
+  )
 
 puts 'Finished!'

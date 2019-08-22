@@ -32,7 +32,11 @@
   <% @experiences.each do |e| %>
     <div class="card-big">
       <div class="card-image">
-        <%= cl_image_tag e.photo %>
+        <% if e.experience_photos.present? %>
+          <% e.experience_photos.each do |p| %>
+            <%= cl_image_tag p.photo %>
+          <% end %>
+        <% end %>
       </div>
 
       <div class="card-caption">

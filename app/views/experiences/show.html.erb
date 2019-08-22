@@ -2,7 +2,8 @@
 
   <div class="show-page-card">
     <div class="show-image"
-        style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('sagrada_familia.jpeg') %>);">
+        style="background-image: linear-gradient(180deg, #000000 0%, rgba(49, 69, 242, 0.21) 50%), url(
+        <%= @experience.experience_photos.first.photo %>);">
     </div>
 
     <div class="show-page-caption">
@@ -17,7 +18,7 @@
 </div>
 
 <div class="footer">
-  <div class="book-button">
-    <%= link_to "Book Now", "#" %>
+<!--   <div class="book-button"> -->
+    <%= link_to "Book Now", "#", class: "primary-button" %>
   </div>
 </div>
