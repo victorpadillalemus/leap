@@ -3,7 +3,9 @@
   <h6>Friday, Aug. 20th</h6>
 </div>
 
-<h6>Categories</h6>
+<div class="experiences-subheader">
+  <h6>Categories</h6>
+</div>
 
 <div class="horizontal-scrolling-card-container">
     <div class="card-small" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('paella3.jpg') %>);">Gastronomy
@@ -22,36 +24,26 @@
     </div>
 </div>
 
+<div class="experiences-subheader">
+  <h6>Top ranked</h6>
+</div>
+
 <div class="vertical-scrolling-card-container">
-  <div class="card-big">
-    <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('sagrada_familia.jpeg') %>);">
-    </div>
-    <div class="card-caption">
-      <p>
-        Hello
-      </p>
-    </div>
-  </div>
-
+  <% @experiences.each do |e| %>
     <div class="card-big">
-    <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('sagrada_familia.jpeg') %>);">
-    </div>
-    <div class="card-caption">
-      <p>
-        Hello
-      </p>
-    </div>
-  </div>
+      <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('sagrada_familia.jpeg') %>);">
+      </div>
 
-  <div class="card-big">
-    <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('sagrada_familia.jpeg') %>);">
+      <div class="card-caption">
+        <div class="card-caption-top">
+          <p class="link-show"><%= link_to e.title, e %></p>
+          <p><i class="fas fa-euro-sign"></i><%= e.price %></p>
+        </div>
+        <div class="card-caption-bottom">
+          <p><i class="fas fa-users"></i><%= e.capacity %></p>
+          <p><i class="fas fa-history"></i><%= e.duration %></p>
+        </div>
+      </div>
     </div>
-    <div class="card-caption">
-      <p>
-        Hello
-      </p>
-    </div>
-  </div>
-
-
+  <% end %>
 </div>

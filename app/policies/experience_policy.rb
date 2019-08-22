@@ -7,6 +7,11 @@ class ExperiencePolicy < ApplicationPolicy
   def create?
     return true
   end
+
+  def filter?
+    true
+  end
+
   def new?
     true
   end
@@ -16,7 +21,7 @@ class ExperiencePolicy < ApplicationPolicy
   end
 
   def show?
-    false
+    true
   end
 
   def edit?

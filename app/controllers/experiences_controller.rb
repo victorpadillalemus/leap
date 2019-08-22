@@ -1,10 +1,12 @@
 class ExperiencesController < ApplicationController
-  before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
+  before_action :set_experience, only: [:show, :edit, :update, :destroy]
   # skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_after_action :verify_authorized, only: [:filter]
 
   def index
-    # @experiences = Experience.all
     @experiences = policy_scope(Experience)
+    @experiences = @experiences.joins(:airport).where("airports.name ILIKE ?", "%#{params[:search][:airport]}%")
+    @experiences = @experiences.where("capacity >= ?", params[:search][:quantity].to_i)
   end
 
   def new
@@ -24,6 +26,9 @@ class ExperiencesController < ApplicationController
   end
 
   def show
+  end
+
+  def filter
   end
 
   def edit
