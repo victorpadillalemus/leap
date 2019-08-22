@@ -12,12 +12,13 @@ User.destroy_all
 
 puts 'Creating Users'
 user1 = User.create!(
-email: "ferdi@wagon.com",
-password: "password",
-first_name: "ferdi",
-last_name: "ferdison",
-admin: true
-  )
+  email: "ferdi@wagon.com",
+  password: "password",
+  first_name: "ferdi",
+  last_name: "ferdison",
+  admin: true
+)
+
 puts 'Users Finished!'
 
 puts 'Cleaning airport database...'
@@ -41,8 +42,8 @@ experience1 = Experience.create!(
     price:        130,
     category:     "Gastronomic",
     duration:     5,
-    start_time:   Time.new("2019-08-20 11:00:00 +0100"),
-    end_time:     Time.new("2019-08-20 21:00:00 +0100"),
+    start_time:   rand(12..24),
+    end_time:     rand(0..12),
     #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
     airport_id: airport1.id )
 
@@ -53,8 +54,8 @@ experience1 = Experience.create!(
     price:        80,
     category:     "Gastronomic",
     duration:     3,
-    start_time:   Time.new("2019-08-20 17:00:00 +0100"),
-    end_time:     Time.new("2019-08-20 23:00:00 +0100"),
+    start_time:   rand(12..24),
+    end_time:     rand(0..12),
     #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
     airport_id: airport1.id )
 
@@ -65,8 +66,8 @@ experience1 = Experience.create!(
     price:        90,
     category:     "Gastronomic",
     duration:     3,
-    start_time:   Time.new("2019-08-20 12:00:00 +0100"),
-    end_time:     Time.new("2019-08-20 17:00:00 +0100"),
+    start_time:   rand(12..24),
+    end_time:     rand(0..12),
     #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
     airport_id: airport1.id )
 
@@ -77,8 +78,8 @@ experience1 = Experience.create!(
     price:        130,
     category:     "Gastronomic",
     duration:     3,
-    start_time:   Time.new("2019-08-20 18:00:00 +0100"),
-    end_time:     Time.new("2019-08-20 01:00:00 +0100"),
+    start_time:   rand(12..24),
+    end_time:     rand(0..12),
     #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
     airport_id: airport1.id )
 
@@ -89,8 +90,8 @@ experience1 = Experience.create!(
     price:        230,
     category:     "Cultural",
     duration:     8,
-    start_time:   Time.new("2019-08-20 09:00:00 +0100"),
-    end_time:     Time.new("2019-08-20 21:00:00 +0100"),
+    start_time:   rand(12..24),
+    end_time:     rand(0..12),
     #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
     airport_id: airport1.id )
 
@@ -101,8 +102,8 @@ experience1 = Experience.create!(
     price:        150,
     category:     "Cultural, Gastronomic",
     duration:     5,
-    start_time:   Time.new("2019-08-20 17:00:00 +0100"),
-    end_time:     Time.new("2019-08-20 22:00:00 +0100"),
+    start_time:   rand(12..24),
+    end_time:     rand(0..12),
     #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
     airport_id: airport1.id )
 
@@ -113,8 +114,8 @@ experience1 = Experience.create!(
     price:        95,
     category:     "Gastronomic",
     duration:     4,
-    start_time:   Time.new("2019-08-20 09:00:00 +0100"),
-    end_time:     Time.new("2019-08-20 14:00:00 +0100"),
+    start_time:   rand(12..24),
+    end_time:     rand(0..12),
     #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
     airport_id: airport1.id )
 
@@ -125,8 +126,8 @@ experience1 = Experience.create!(
     price:        140,
     category:     "Cultural",
     duration:     4,
-    start_time:   Time.new("2019-08-20 10:00:00 +0100"),
-    end_time:     Time.new("2019-08-20 18:00:00 +0100"),
+    start_time:   rand(12..24),
+    end_time:     rand(0..12),
     #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
     airport_id: airport1.id )
 
@@ -137,8 +138,8 @@ experience1 = Experience.create!(
     price:        140,
     category:     "Gastronomic",
     duration:     4,
-    start_time:   Time.new("2019-08-20 10:00:00 +0100"),
-    end_time:     Time.new("2019-08-20 18:00:00 +0100"),
+    start_time:   rand(12..24),
+    end_time:     rand(0..12),
     #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
     airport_id: airport1.id )
 
