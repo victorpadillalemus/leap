@@ -1,0 +1,18 @@
+<style>
+  h1 {
+    font-family: sans-serif;
+    font-size: 22px;
+  }
+    h2, p{
+    font-family: sans-serif;
+    font-size: 16px;
+  }
+
+
+</style>
+<h1>Welcome to the Leap</h1>
+<h2>hello <%= @user.email  %></h2>
+<p>
+  <%= @greeting %>
+</p>
+<p><%= link_to 'Get back to the Leap', root_url %></p>
