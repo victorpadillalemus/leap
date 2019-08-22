@@ -6,22 +6,24 @@
 
 
     <div class="slider">
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      <input type="range" min="1" max="24" value="50" class="slider" id="myRange" name="search[arrival]">
     </div>
 
     <div class="slider">
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      <input type="range" min="1" max="24" value="50" class="slider" id="myRange" name="search[departure]">
     </div>
     <div id="demo"></div>
 
 
   <div class="number">
     <span class="minus">-</span>
-    <input type="text" value="1"/>
+    <input type="text" value="1" name="search[quantity]"/>
     <span class="plus">+</span>
   </div>
 
+  <input type="hidden" value="<%= params[:home_search][:airport] %>" name="search[airport]">
   <%= f.submit "Search", class: "primary-button" %>
   <% end %>
 
 </div>
+

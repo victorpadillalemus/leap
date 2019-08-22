@@ -1,8 +1,7 @@
-<%= form_tag experiences_path, method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
+<%= simple_form_for :home_search, url: filter_path, method: :get do |f| %>
+        <%= f.input :airport,
           class: "search-bar",
           placeholder: "which is your city-airport layover?"
         %>
-        <%= submit_tag "Search", class: "primary-button" %>
+        <%= f.submit "Search", class: "primary-button" %>
       <% end %>
