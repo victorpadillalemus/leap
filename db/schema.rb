@@ -49,16 +49,17 @@ ActiveRecord::Schema.define(version: 2019_08_21_125009) do
   create_table "experiences", force: :cascade do |t|
     t.text "description"
     t.integer "capacity"
-    t.integer "price"
     t.string "category"
     t.string "title"
     t.integer "duration"
     t.string "meeting_point"
-    t.time "start_time"
-    t.time "end_time"
+    t.integer "start_time"
+    t.integer "end_time"
     t.bigint "airport_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "price_cents", default: 0, null: false
+    t.string "price_currency", default: "EUR", null: false
     t.index ["airport_id"], name: "index_experiences_on_airport_id"
   end
 

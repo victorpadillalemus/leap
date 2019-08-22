@@ -4,22 +4,14 @@ class ExperiencesController < ApplicationController
   skip_after_action :verify_authorized, only: [:filter]
 
   def index
-    # @experiences = Experience.all
-    # session[:start_time] = params[:filter][:start_time]
-    # session[:end_time] = params[:filter][:end_time]
-    # session[:capacity] = params[:filter][:capacity]
-    # if params[:query].present?
-    #   sql_query = " \
-    #     movies.title @@ :query \
-    #     OR movies.syllabus @@ :query \
-    #     OR directors.first_name @@ :query \
-    #     OR directors.last_name @@ :query \
-    #   "
-    #   @movies = Movie.joins(:director).where(sql_query, query: "%#{params[:query]}%")
-    # else
-    #   @movies = Movie.all
-    # end
-    @experiences = policy_scope(Experience)
+    if params[:search]
+      @experiences = SearchExperiences.new(
+        params: params[:search],
+        experiences: policy_scope(Experience)
+      ).call
+    else
+      @experiences = policy_scope(Experience)
+    end
   end
 
   def new

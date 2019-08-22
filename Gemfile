@@ -17,6 +17,9 @@ gem 'webpacker'
 gem 'devise'
 gem 'geocoder'
 gem 'pundit'
+gem 'money-rails'
+gem 'stripe'
+
 gem 'letter_opener', group: :development
 
 group :development do
