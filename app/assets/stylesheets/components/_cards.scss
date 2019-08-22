@@ -1,19 +1,19 @@
 .experiences-header {
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  // background-color: white;
+  margin: 8px;
 }
 
-// .experiences-subheader {
-//   background-color: white;
-//   margin: 0;
-// }
+.experiences-subheader {
+  margin: 8px;
+}
 
 .horizontal-scrolling-card-container {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  margin: 2px;
+  margin: 8px;
   background-color: white;
 
   .card-small {
@@ -37,11 +37,10 @@
 
 .vertical-scrolling-card-container {
   margin-top: 20px;
-  margin: 2px;
+  margin: 8px;
+}
 
   .card-big {
-    // margin-bottom: 100px;
-    // margin-right: 10px;
     height: 380px;
     width: 100%;
     color: white;
@@ -51,33 +50,49 @@
     border-radius: 5px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     text-decoration: none;
-  }
-
+    margin-bottom: 20px;
 
   .card-image {
     height: 70%;
     background-size: cover;
     background-position: center;
+    border-radius: 5px;
   }
   .card-caption{
     padding: 10px;
     height: 30%;
-    text-align: center;
+    // text-align: center;
     color: black;
     background-color: white;
     overflow-wrap: break-word;
+    border-radius: 5px;
   }
   .card-caption-top {
+    font-size: 18px;
     text-decoration: none;
     display: flex;
     justify-content: space-between;
   }
+
+  .card-caption-middle {
+    font-size: 10px;
+  }
   .card-caption-bottom {
     display: flex;
     padding-right: 50px;
+    font-size: 16px;
+    margin-bottom: 4px;
   }
   .link-show {
     text-decoration: none;
   }
+
+}
+.small-margin-right {
+  margin-right: 5px;
+}
+
+.small-margin-bottom {
+  margin-bottom: 20px;
 }
 

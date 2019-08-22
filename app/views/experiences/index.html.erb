@@ -36,12 +36,15 @@
 
       <div class="card-caption">
         <div class="card-caption-top">
-          <p class="link-show"><%= link_to e.title, e %></p>
-          <p><i class="fas fa-euro-sign"></i><%= e.price %></p>
+          <div class="link-show"><%= link_to e.title, e %></div>
+          <div><i class="fas fa-euro-sign"></i><%= e.price %></div>
+        </div>
+        <div class="card-caption-middle">
+          <div class="small-margin-bottom"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5.0 </div>
         </div>
         <div class="card-caption-bottom">
-          <p><i class="fas fa-users"></i><%= e.capacity %></p>
-          <p><i class="fas fa-history"></i><%= e.duration %></p>
+          <div class="small-margin-right"><i class="fas fa-users"></i><%= e.capacity %></div>
+          <div><i class="fas fa-history"></i><%= e.duration %></div>
         </div>
       </div>
     </div>
