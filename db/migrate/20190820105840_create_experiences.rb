@@ -8,8 +8,8 @@ class CreateExperiences < ActiveRecord::Migration[5.2]
       t.string :title
       t.integer :duration
       t.string :meeting_point
-      t.time :start_time
-      t.time :end_time
+      t.integer :start_time
+      t.integer :end_time
       t.references :airport, foreign_key: true
 
       t.timestamps

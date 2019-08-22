@@ -53,8 +53,8 @@ ActiveRecord::Schema.define(version: 2019_08_21_125009) do
     t.string "title"
     t.integer "duration"
     t.string "meeting_point"
-    t.time "start_time"
-    t.time "end_time"
+    t.integer "start_time"
+    t.integer "end_time"
     t.bigint "airport_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

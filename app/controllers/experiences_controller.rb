@@ -4,9 +4,14 @@ class ExperiencesController < ApplicationController
   skip_after_action :verify_authorized, only: [:filter]
 
   def index
-    @experiences = policy_scope(Experience)
-    @experiences = @experiences.joins(:airport).where("airports.name ILIKE ?", "%#{params[:search][:airport]}%")
-    @experiences = @experiences.where("capacity >= ?", params[:search][:quantity].to_i)
+    if params[:search]
+      @experiences = SearchExperiences.new(
+        params: params[:search],
+        experiences: policy_scope(Experience)
+      ).call
+    else
+      @experiences = policy_scope(Experience)
+    end
   end
 
   def new
