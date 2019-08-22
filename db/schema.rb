@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2019_08_20_110617) do
-=======
-ActiveRecord::Schema.define(version: 2019_08_20_145406) do
->>>>>>> ee5b823bf201fd0a9af9f4e6889f138a28015e2b
+ActiveRecord::Schema.define(version: 2019_08_21_125009) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +22,20 @@ ActiveRecord::Schema.define(version: 2019_08_20_145406) do
     t.datetime "updated_at", null: false
     t.float "latitude"
     t.float "longitude"
+  end
+
+  create_table "bookings", force: :cascade do |t|
+    t.datetime "start_datetime"
+    t.datetime "end_datetime"
+    t.integer "total_price"
+    t.boolean "status"
+    t.bigint "user_id"
+    t.bigint "experience_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "quantity"
+    t.index ["experience_id"], name: "index_bookings_on_experience_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "experience_photos", force: :cascade do |t|
@@ -52,6 +62,24 @@ ActiveRecord::Schema.define(version: 2019_08_20_145406) do
     t.index ["airport_id"], name: "index_experiences_on_airport_id"
   end
 
+  create_table "favorites", force: :cascade do |t|
+    t.bigint "experience_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["experience_id"], name: "index_favorites_on_experience_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "rating"
+    t.text "content"
+    t.bigint "booking_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["booking_id"], name: "index_reviews_on_booking_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -71,6 +99,11 @@ ActiveRecord::Schema.define(version: 2019_08_20_145406) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "experiences"
+  add_foreign_key "bookings", "users"
   add_foreign_key "experience_photos", "experiences"
   add_foreign_key "experiences", "airports"
+  add_foreign_key "favorites", "experiences"
+  add_foreign_key "favorites", "users"
+  add_foreign_key "reviews", "bookings"
 end

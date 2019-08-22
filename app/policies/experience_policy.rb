@@ -21,7 +21,7 @@ class ExperiencePolicy < ApplicationPolicy
   end
 
   def show?
-    false
+    true
   end
 
   def edit?
