@@ -3,31 +3,19 @@
   <div class="wrap">
     <%= simple_form_for :search, url: experiences_path, method: :get do |f| %>
     <%= f.input :transit_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-<<<<<<< HEAD:app/views/experiences/filter.html.erb
-=======
-
->>>>>>> 8d696093828098e174e04a1fb6cca09a1ab4e686:app/views/pages/filter.html.erb
 
       <div class= "slider-container">
           <div class="slider-1">
             <h3>Arrival</h3>
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange" name="search[arrival]">
            </div>
 
-<<<<<<< HEAD:app/views/experiences/filter.html.erb
              <%= f.input :arrival, id: "demo"  %>
            <div class="slider-2">
 
             <h4>Departure</h4>
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange2" name="search[departure]">
            </div>
-=======
-    <div class="slider">
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-    </div>
-    <div id="demo"></div>
-
->>>>>>> 8d696093828098e174e04a1fb6cca09a1ab4e686:app/views/pages/filter.html.erb
 
              <%= f.input :departure , id: "demo2" %>
            </div>
@@ -36,19 +24,15 @@
   <div class="passenger-counter d-flex row h-100">
     <h4>Passengers</h4>
     <span class="minus">-</span>
-    <input type="text" value="1" class="my-auto"/>
+
+    <input type="text" value="1" class="my-auto" name="search[quantity]/>
     <span class="plus">+</span>
   </div>
 
-<<<<<<< HEAD:app/views/experiences/filter.html.erb
-  <%= link_to "Search", "#", class: "secondary-button" %>
-</div>
-
-
-
-=======
-  <%= f.submit "Search", class: "primary-button" %>
+  <input type="hidden" value="<%= params[:home_search][:airport] %>" name="search[airport]">
+                                                                                           
+  <%= f.submit "Search", class: "secondary-button" %>
   <% end %>
->>>>>>> 8d696093828098e174e04a1fb6cca09a1ab4e686:app/views/pages/filter.html.erb
 
 </div>
+
