@@ -4,6 +4,7 @@ class ExperiencesController < ApplicationController
   skip_after_action :verify_authorized, only: [:filter]
 
   def index
+    @search_params = search_strong_params
     if params[:search]
       @experiences = SearchExperiences.new(
         params: params[:search],
@@ -57,6 +58,10 @@ class ExperiencesController < ApplicationController
   def set_experience
     @experience = Experience.find(params[:id])
     authorize(@experience)
+  end
+
+  def search_strong_params
+    params.require(:search).permit(:transit_date, :arrival, :arrive, :departure, :depart, :quantity, :airport)
   end
 
   def experience_strong_params

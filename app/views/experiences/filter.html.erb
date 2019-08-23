@@ -13,23 +13,18 @@
              <%= f.input :arrival, id: "demo"  %>
            <div class="slider-2">
 
-            <h4>Departure</h4>
+            <h3>Departure</h3>
             <input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
            </div>
 
              <%= f.input :departure , id: "demo2" %>
            </div>
       </div>
-
-  <div class="passenger-counter">
-    <div>
-      <h4>Passengers</h4>
-    </div>
-    <div class="passenger-buttons">
-      <span class="minus">-</span>
-      <input type="text" value="1" class="my-auto"/>
-      <span class="plus">+</span>
-    </div>
+  <div class="passenger-counter d-flex row h-100">
+    <h3>Passengers</h3>
+    <span class="minus">-</span>
+    <input type="text" value="1" class="my-auto"/>
+    <span class="plus">+</span>
   </div>
 
   <%= f.submit "Search", class: "secondary-button" %>
