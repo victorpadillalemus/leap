@@ -1,20 +1,26 @@
-<div class="purchase-container">
-  <h1>Purchase of Experience</h1>
-  <%= form_tag booking_payments_path(@booking) do %>
-  <article>
-    <label class="amount">
-      <span>Amount: <%= humanized_money_with_symbol(@booking.total_price) %></span>
-    </label>
-  </article>
+<div class="payment-container">
+  <div class="summary">
+    <div id="steps">Step 1 of 1</div>
+    <h3>Book your leap</h3>
+    <h4 id="summary-title"><%= @experience.title %></h4>
+    <div id="steps">12 people have viewed this leap in the last hour. Travel trends suggest this leap will be booked within the next few hours.</div>
+    <hr>
+    <div>Your leap starts at: <%= @experience.start_time %>:00</div>
+    <div>We'll take you back to the airport for your flight at: <%= @experience.end_time %>:00</div>
+    <%= form_tag booking_payments_path(@booking) do %>
+    <article>
+      <label class="amount">
+        <span>Amount: <%= humanized_money_with_symbol(@booking.total_price) %></span>
+      </label>
+    </article>
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-    data-name="My Experience"
+    data-name="<%= @experience.title %>"
     data-email="<%= current_user.email %>"
-    data-amount="<%= @experience.price_cents %>"
-    data-currency="<%= @experience.price.currency %>"></script>
-  <% end %>
-
-
+    data-amount= "<%= @booking.total_price %>"
+    data-currency="<%= @experience.price_currency %>"></script>
+    <% end %>
+  </div>
 
 </div>

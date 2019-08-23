@@ -39,11 +39,11 @@ experience1 = Experience.create!(
     title:        "Tapas Walking Tour",
     description:  "A guided tour that takes you around Barcelona ́s historical center covering the Gothic area and El Born. The tour includes various stops at selected restaurants to enjoy different traditional tapas whilst walking through some of the most picturesque areas of the city.",
     capacity:     8,
-    price:        130,
+    price:        130.25,
     category:     "Gastronomy",
     duration:     5,
-    start_time:   rand(12..24),
-    end_time:     rand(0..12),
+    start_time:   rand(0..12),
+    end_time:     rand(12..24),
     #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
     airport_id: airport1.id )
 
@@ -59,8 +59,8 @@ experience1 = Experience.create!(
     price:        80,
     category:     "Gastronomy",
     duration:     3,
-    start_time:   rand(12..24),
-    end_time:     rand(0..12),
+    start_time:   rand(0..12),
+    end_time:     rand(12..24),
     airport_id: airport1.id )
 
 experience_photo2 = ExperiencePhoto.create!(
@@ -75,8 +75,8 @@ experience1 = Experience.create!(
     price:        90,
     category:     "Gastronomy",
     duration:     3,
-    start_time:   rand(12..24),
-    end_time:     rand(0..12),
+    start_time:   rand(0..12),
+    end_time:     rand(12..24),
     airport_id: airport1.id )
 
 experience_photo3 = ExperiencePhoto.create!(
@@ -91,8 +91,8 @@ experience1 = Experience.create!(
     price:        130,
     category:     "Gastronomy",
     duration:     3,
-    start_time:   rand(12..24),
-    end_time:     rand(0..12),
+    start_time:   rand(0..12),
+    end_time:     rand(12..24),
     airport_id: airport1.id )
 
 experience_photo4 = ExperiencePhoto.create!(
@@ -107,8 +107,8 @@ experience1 = Experience.create!(
     price:        230,
     category:     "Cultural",
     duration:     8,
-    start_time:   rand(12..24),
-    end_time:     rand(0..12),
+    start_time:   rand(0..12),
+    end_time:     rand(12..24),
     airport_id: airport1.id )
 
 experience_photo5 = ExperiencePhoto.create!(
@@ -123,8 +123,8 @@ experience1 = Experience.create!(
     price:        150,
     category:     "Cultural, Gastronomy",
     duration:     5,
-    start_time:   rand(12..24),
-    end_time:     rand(0..12),
+    start_time:   rand(0..12),
+    end_time:     rand(12..24),
     airport_id: airport1.id )
 
 experience_photo6 = ExperiencePhoto.create!(
@@ -139,8 +139,8 @@ experience1 = Experience.create!(
     price:        95,
     category:     "Gastronomy",
     duration:     4,
-    start_time:   rand(12..24),
-    end_time:     rand(0..12),
+    start_time:   rand(0..12),
+    end_time:     rand(12..24),
     airport_id: airport1.id )
 
 experience_photo7 = ExperiencePhoto.create!(
@@ -155,8 +155,8 @@ experience1 = Experience.create!(
     price:        140,
     category:     "Cultural",
     duration:     4,
-    start_time:   rand(12..24),
-    end_time:     rand(0..12),
+    start_time:   rand(0..12),
+    end_time:     rand(12..24),
     airport_id: airport1.id )
 
 experience_photo8 = ExperiencePhoto.create!(
@@ -171,8 +171,8 @@ experience1 = Experience.create!(
     price:        140,
     category:     "Gastronomy",
     duration:     4,
-    start_time:   rand(12..24),
-    end_time:     rand(0..12),
+    start_time:   rand(0..12),
+    end_time:     rand(12..24),
     airport_id: airport1.id )
 
 experience_photo9 = ExperiencePhoto.create!(

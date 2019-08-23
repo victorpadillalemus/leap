@@ -1,0 +1,22 @@
+.payment-container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.summary {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+#steps {
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+#summary-title {
+  font-style: italic;
+  color: #FF3147;
+}
