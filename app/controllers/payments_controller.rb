@@ -14,10 +14,11 @@ class PaymentsController < ApplicationController
 
     charge = Stripe::Charge.create(
       customer: customer.id, # You should store this customer id and re-use it.
-      amount: @booking.amount_cents,
+      amount: @booking.total_price,
       description: "Payment for experience #{@booking.id}",
       currency: @booking.amount.currency
     )
+    authorize :payment
 
     @booking.update(payment: charge.to_json, state: 'paid')
     redirect_to booking_path(@booking)

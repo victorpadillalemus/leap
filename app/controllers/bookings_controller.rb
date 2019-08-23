@@ -24,6 +24,7 @@ class BookingsController < ApplicationController
 
   def show
     @booking = current_user.bookings.where(state: 'paid').find(params[:id])
+    authorize @booking
   end
 
   # private
