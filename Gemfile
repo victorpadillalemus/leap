@@ -19,7 +19,8 @@ gem 'geocoder'
 gem 'pundit'
 gem 'money-rails'
 gem 'stripe'
-
+gem 'carrierwave', '~> 1.2'
+gem 'cloudinary', '~> 1.9.1'
 gem 'letter_opener', group: :development
 
 group :development do
@@ -33,6 +34,6 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails', groups: [:development, :test]
-  gem 'cloudinary', '~> 1.9.1'
-  gem 'carrierwave', '~> 1.2'
+
+
 end
