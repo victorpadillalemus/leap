@@ -8,20 +8,31 @@
 </div>
 
 <div class="horizontal-scrolling-card-container">
+  <%= link_to experiences_path(search: @search_params.dup.merge!({category: "Gastronomy"})) do  %>
     <div class="card-small" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('paella3.jpg') %>);">Gastronomy
     </div>
+  <% end %>
 
+  <%= link_to experiences_path(search: @search_params.dup.merge!({category: "Romantic"})) do  %>
     <div class="card-small" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('romantic.jpeg') %>);">Romantic
     </div>
+    <% end %>
 
+
+    <%= link_to experiences_path(search: @search_params.dup.merge!({category: "Family"})) do  %>
     <div class="card-small" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('family.jpeg') %>);">Family
     </div>
+    <% end %>
 
+  <%= link_to experiences_path(search: @search_params.dup.merge!({category: "Cultural"})) do  %>
     <div class="card-small" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('cultural.jpeg') %>);">Cultural
     </div>
+  <% end %>
 
+  <%= link_to experiences_path(search: @search_params.dup.merge!({category: "Nightlife"})) do  %>
     <div class="card-small" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('nightlife.jpeg') %>);">Nightlife
     </div>
+    <% end %>
 </div>
 
 <div class="experiences-subheader">
