@@ -21,11 +21,15 @@
            </div>
       </div>
 
-  <div class="passenger-counter d-flex row h-100">
-    <h4>Passengers</h4>
-    <span class="minus">-</span>
-    <input type="text" value="1" class="my-auto"/>
-    <span class="plus">+</span>
+  <div class="passenger-counter">
+    <div>
+      <h4>Passengers</h4>
+    </div>
+    <div class="passenger-buttons">
+      <span class="minus">-</span>
+      <input type="text" value="1" class="my-auto"/>
+      <span class="plus">+</span>
+    </div>
   </div>
 
   <%= f.submit "Search", class: "secondary-button" %>

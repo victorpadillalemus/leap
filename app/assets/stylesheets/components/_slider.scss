@@ -1,5 +1,6 @@
 .filter-container {
   margin: 0 auto;
+  width: 90%;
 }
 
 /* The slider itself */
@@ -45,3 +46,13 @@
   background: #FF3147; /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
+
+.passenger-counter {
+  display: flex;
+  flex-direction: row;
+}
+
+// .passenger-buttons {
+//   display: flex;
+//   flex-direction: row;
+// }
