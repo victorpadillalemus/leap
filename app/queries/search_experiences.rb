@@ -13,6 +13,7 @@ class SearchExperiences
     experiences = filter_by_quantity(params[:quantity], experiences) if params[:quantity].present?
     experiences = filter_by_arrive(params[:arrive], experiences) if params[:arrive].present?
     experiences = filter_by_depart(params[:depart], experiences) if params[:depart].present?
+    experiences = filter_by_category(params[:category], experiences) if params[:category].present?
     # experiences = filter_by_transit_date(params[:transit_date], experiences) if params[:transit_date].present?
     experiences
   end
@@ -39,6 +40,10 @@ class SearchExperiences
 
   def filter_by_transit_date(transit_date, experiences)
     # for later
+  end
+
+  def filter_by_category(category, experiences)
+    experiences.where("category = ?", category)
   end
 
   def check_for_aiport
