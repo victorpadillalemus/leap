@@ -1,14 +1,6 @@
 <div class=“container”>
- <br>
- <br>
- <br>
- <h1>Your leap <%= @booking.experience.title %></h1>
-   <p>Price $<%= @booking.experience.price %></p>
-   <p><%= @booking.experience.description %></p>
-   <p>from: <%= @booking.start_datetime %></p>
-   <p>to: <%= @booking.end_datetime %></p>
-   <p>number of hours: <%= (@booking.end_datetime - @booking.start_datetime).to_i %></p>
-   <p>Total price $<%= @booking.total_price %></p>
-   <br>
-   <%= link_to 'Back', experiences_path, class: "btn btn-back" %>
+   <%= form_tag orders_path do %>
+    <%= hidden_field_tag 'experience_id', @experience.id %>
+    <%= submit_tag 'Purchase', class: 'primary-button' %>
+  <% end %>
 </div>

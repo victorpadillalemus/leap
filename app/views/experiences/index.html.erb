@@ -53,7 +53,7 @@
       <div class="card-caption">
         <div class="card-caption-top">
           <div class="link-show"><%= link_to e.title, e %></div>
-          <div><i class="fas fa-euro-sign"></i><%= e.price %></div>
+          <div><%= humanized_money_with_symbol(e.price) %></div>
         </div>
         <div class="card-caption-middle">
           <div class="small-margin-bottom"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5.0 </div>

@@ -10,6 +10,7 @@ class ExperiencesController < ApplicationController
         params: params[:search],
         experiences: policy_scope(Experience)
       ).call
+      session[:booking_data] = params[:search]
     else
       @experiences = policy_scope(Experience)
     end

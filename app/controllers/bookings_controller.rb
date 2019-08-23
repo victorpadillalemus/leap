@@ -1,21 +1,29 @@
 class BookingsController < ApplicationController
+  def new
+    @booking = Booking.new
+  end
+
   def create
+    # {"transit_date"=>"", "arrival"=>"10", "arrive"=>"12 :30", "departure"=>"23", "depart"=>"19 :00", "quantity"=>"1", "airport"=>"barcelona"}
     @experience = Experience.find(params[:experience_id])
     @booking = Booking.new()
-    @booking.start_datetime = session[:start_time]
-    @booking.end_datetime = session[:end_time]
-    @booking.quantity = session[:capacity]
+    @booking.start_datetime = session[:booking_data]['arrival']
+    @booking.end_datetime = session[:booking_data]['departure']
+    @booking.quantity = session[:booking_data]['quantity']
     @booking.experience = @experience
     @booking.user = current_user
+    @booking.state = 'pending'
+    authorize @booking
     if @booking.save
-      redirect_to booking_path(@booking)
+      session[:booking_data] = nil
+      redirect_to new_booking_payment_path(@booking)
     else
       render "experiences/index"
     end
   end
 
   def show
-    @booking = Booking.find(params[:id])
+    @booking = current_user.bookings.where(state: 'paid').find(params[:id])
   end
 
   # private
