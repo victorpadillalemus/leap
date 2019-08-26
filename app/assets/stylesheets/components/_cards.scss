@@ -90,6 +90,7 @@
 }
   .card-image img {
     width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
   }
 
   .card-caption{
@@ -108,14 +109,26 @@
     justify-content: space-between;
   }
 
+  .card-caption-top a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .card-caption-top a:hover {
+    color: #f67280;
+    text-decoration: none;
+  }
+
   .card-caption-middle {
     font-size: 10px;
+    color: black;
   }
   .card-caption-bottom {
     display: flex;
     padding-right: 50px;
     font-size: 16px;
     margin-bottom: 4px;
+    color: black;
   }
   .card-caption-top .link-show {
     text-decoration: none;
@@ -130,4 +143,19 @@
 
 .small-margin-bottom {
   margin-bottom: 20px;
+}
+
+.reviews {
+  display: flex;
+  color: grey;
+}
+
+.reviews p {
+  margin-left: 10px;
+  font-family: Roboto;
+  margin-bottom: 0px;
+}
+
+.show-rating {
+  font-size: 12px;
 }

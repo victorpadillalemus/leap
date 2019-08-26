@@ -6,14 +6,14 @@
         <%= f.input :transit_date, as: :string, required: false, input_html: {class: "datepicker"} %>
         <div class= "slider-container">
             <div class="slider-1">
-              <%= f.input :arrive, label: false %>
               <h3>Arrival</h3>
+              <%= f.input :arrive, label: false %>
               <input type="range" min="1" max="100" value="0" class="slider" id="myRange" name="search[arrival]">
              </div>
 
              <div class="slider-2">
-              <%= f.input :depart, label: false %>
               <h3>Departure</h3>
+              <%= f.input :depart, label: false %>
               <input type="range" min="1" max="100" value="50" class="slider" id="myRange2" name="search[departure]">
              </div>
         </div>
