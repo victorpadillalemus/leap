@@ -42,8 +42,8 @@ experience1 = Experience.create!(
     price:        130.25,
     category:     "Gastronomy",
     duration:     5,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   11,
+    end_time:     21,
     #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
     airport_id: airport1.id )
 
@@ -59,8 +59,8 @@ experience1 = Experience.create!(
     price:        80,
     category:     "Gastronomy",
     duration:     3,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   18,
+    end_time:     23,
     airport_id: airport1.id )
 
 experience_photo2 = ExperiencePhoto.create!(
@@ -75,8 +75,8 @@ experience1 = Experience.create!(
     price:        90,
     category:     "Gastronomy",
     duration:     3,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   11,
+    end_time:     16,
     airport_id: airport1.id )
 
 experience_photo3 = ExperiencePhoto.create!(
@@ -91,8 +91,8 @@ experience1 = Experience.create!(
     price:        130,
     category:     "Gastronomy",
     duration:     3,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   19,
+    end_time:     24,
     airport_id: airport1.id )
 
 experience_photo4 = ExperiencePhoto.create!(
@@ -107,8 +107,8 @@ experience1 = Experience.create!(
     price:        230,
     category:     "Cultural",
     duration:     8,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   09,
+    end_time:     17,
     airport_id: airport1.id )
 
 experience_photo5 = ExperiencePhoto.create!(
@@ -123,8 +123,8 @@ experience1 = Experience.create!(
     price:        150,
     category:     "Cultural, Gastronomy",
     duration:     5,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   19,
+    end_time:     24,
     airport_id: airport1.id )
 
 experience_photo6 = ExperiencePhoto.create!(
@@ -139,8 +139,8 @@ experience1 = Experience.create!(
     price:        95,
     category:     "Gastronomy",
     duration:     4,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   08,
+    end_time:     16,
     airport_id: airport1.id )
 
 experience_photo7 = ExperiencePhoto.create!(
@@ -155,8 +155,8 @@ experience1 = Experience.create!(
     price:        140,
     category:     "Cultural",
     duration:     4,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   09,
+    end_time:     17,
     airport_id: airport1.id )
 
 experience_photo8 = ExperiencePhoto.create!(
@@ -171,8 +171,8 @@ experience1 = Experience.create!(
     price:        140,
     category:     "Gastronomy",
     duration:     4,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   09,
+    end_time:     17,
     airport_id: airport1.id )
 
 experience_photo9 = ExperiencePhoto.create!(
@@ -187,8 +187,8 @@ experience1 = Experience.create!(
     price:        20,
     category:     "Romantic",
     duration:     3,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   19,
+    end_time:     23),
     airport_id: airport1.id )
 
 experience_photo10 = ExperiencePhoto.create!(
@@ -203,8 +203,8 @@ experience1 = Experience.create!(
     price:        50,
     category:     "Romantic",
     duration:     2,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   19,
+    end_time:     23,
     airport_id: airport1.id )
 
 experience_photo11 = ExperiencePhoto.create!(
@@ -219,8 +219,8 @@ experience1 = Experience.create!(
     price:        40,
     category:     "Family",
     duration:     3,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   10,
+    end_time:     18,
     airport_id: airport1.id )
 
 experience_photo12 = ExperiencePhoto.create!(
@@ -235,8 +235,8 @@ experience1 = Experience.create!(
     price:        95,
     category:     "Family",
     duration:     6,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   10,
+    end_time:     18,
     airport_id: airport1.id )
 
 experience_photo13 = ExperiencePhoto.create!(
@@ -251,8 +251,8 @@ experience1 = Experience.create!(
     price:        15,
     category:     "Nightlife",
     duration:     4,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   18,
+    end_time:     09,
     airport_id: airport1.id )
 
 experience_photo15 = ExperiencePhoto.create!(
@@ -267,8 +267,8 @@ experience1 = Experience.create!(
     price:        20,
     category:     "Nightlife",
     duration:     3,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   18,
+    end_time:     09,
     airport_id: airport1.id )
 
 experience_photo16 = ExperiencePhoto.create!(
