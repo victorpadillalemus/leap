@@ -41,6 +41,15 @@ nav {
   color: black;
 }
 
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 0px solid transparent !important;
+    border-radius: 0px;
+}
+
 .burger{
   cursor: pointer;
 }
