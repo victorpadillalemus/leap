@@ -13,12 +13,12 @@ const inputSlider = () => {
   // Update the current slider value (each time you drag the slider handle)
     slider.oninput = function() {
       const hour= (this.value -1) / 2
-      output.value = `${(Math.floor(hour) + 8) % 24} :${Number.isInteger(hour) ? "00" : "30"}`
+      output.value = `${(Math.floor(hour) + 0) % 24} :${Number.isInteger(hour) ? "00" : "30"}`
     }
 
   slider2.oninput = function() {
     const hour= (this.value -1) / 2
-    output2.value = `${(Math.floor(hour) + 8) % 24} :${Number.isInteger(hour) ? "00" : "30"}`
+    output2.value = `${(Math.floor(hour) + 24) % 24} :${Number.isInteger(hour) ? "00" : "30"}`
   }
 
     $(document).ready(function() {

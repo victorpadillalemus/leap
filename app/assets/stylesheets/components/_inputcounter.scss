@@ -1,3 +1,8 @@
+.wrap label {
+  font-size: 23px;
+  font-weight: bold;
+}
+
 .page-container {
   margin-top: 0px;
   height: 100vh;
@@ -96,6 +101,7 @@ input, .my-auto {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 150px;
 }
 .passanger-counter-header h3 {
   font-size: 22px;
