@@ -160,3 +160,12 @@
 .show-rating {
   font-size: 12px;
 }
+
+.card-caption-flex {
+  display:flex;
+  justify-content: space-between;
+}
+.small-margin-left {
+  margin-right: 2px;
+  align-items: center;
+}
