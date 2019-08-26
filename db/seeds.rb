@@ -44,7 +44,7 @@ experience1 = Experience.create!(
     title:        "Tapas Walking Tour",
     description:  "A guided tour that takes you around Barcelona ́s historical center covering the Gothic area and El Born. The tour includes various stops at selected restaurants to enjoy different traditional tapas whilst walking through some of the most picturesque areas of the city.",
     capacity:     8,
-    price:        130.25,
+    price:        130,
     category:     "Gastronomy",
     duration:     5,
     start_time:   11,

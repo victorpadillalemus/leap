@@ -6,7 +6,7 @@ class Booking < ApplicationRecord
   monetize :amount_cents
 
   def set_total_price
-    self.total_price = self.experience.price * self.quantity
-    self.save
+    self.amount = experience.price * quantity
+    save
   end
 end
