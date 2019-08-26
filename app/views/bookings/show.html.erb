@@ -2,7 +2,14 @@
    <h3>Congrats you're taking the leap!</h3>
    <div>Confirmation #4564ljka</div>
    <br>
-   <%= image_tag("meet.png") %>
+   <div
+    id="map"
+    style="width: 80%;
+    height: 200px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+    <br>
    <h5>Advice and Recommendations</h5>
    <ul>
      <li>Bring confortable walking shoes</li>
@@ -15,7 +22,7 @@
    <p>Pass the crowds outside the Sagrada Familia with this skip-the-line pass and 2 hours tour. In the company of a local guide, you’ll gain priority access to the church towers..</p>
    <ul>
      <li>Skip the line</li>
-     <li>Standard access to the towes</li>
+     <li>Standard access to the towers</li>
      <li>Local guide</li>
      <li>Small group</li>
    </ul>
