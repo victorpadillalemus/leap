@@ -197,7 +197,7 @@ experience10 = Experience.create!(
 
 experience_photo10 = ExperiencePhoto.create!(
   experience: experience10,
-  remote_photo_url: "Pending"
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566813018/Santiago_Bernabeu_e3yjjz.jpg"
   )
 
 experience11 = Experience.create!(
