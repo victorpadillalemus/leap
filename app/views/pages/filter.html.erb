@@ -15,6 +15,7 @@
               <%= f.input :depart, label: false %>
               <h3>Departure</h3>
               <input type="range" min="1" max="100" value="50" class="slider" id="myRange2" name="search[departure]">
+
              </div>
         </div>
     </div>
@@ -31,7 +32,6 @@
     </div>
     <div class="search-button">
       <input type="hidden" value="<%= params[:home_search][:airport] %>" name="search[airport]">
-
       <%= f.submit "Search", class: "primary-button" %>
     </div>
      <% end %>
