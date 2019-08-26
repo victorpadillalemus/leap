@@ -5,6 +5,7 @@ class ExperiencesController < ApplicationController
 
   def index
     @search_params = search_strong_params
+    @favorite = Favorite.new()
     if params[:search]
       @experiences = SearchExperiences.new(
         params: params[:search],

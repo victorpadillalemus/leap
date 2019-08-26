@@ -78,7 +78,15 @@
           <div class="small-margin-right"><i class="fas fa-users"></i><%= e.capacity %></div>
           <div><i class="fas fa-history"></i><%= e.duration %></div>
         </div>
-          <div class="small-margin-left"><i class="far fa-paper-plane"></i></div>
+          <div class="small-margin-left">
+            <% if Favorite.where(experience_id: e.id).where(user_id: current_user.id).count == 0 %>
+              <%= link_to experience_favorites_path(e), method: :post do %>
+                <i class="far fa-paper-plane"></i>
+              <% end %>
+            <% else %>
+             <i class="fas fa-paper-plane"></i>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>

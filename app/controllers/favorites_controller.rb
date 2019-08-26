@@ -6,11 +6,19 @@ class FavoritesController < ApplicationController
   end
 
   def create
-    if Favorite.create(favorited: @experience, user: current_user)
-      redirect_to @experience, notice: "Leap has been added to favorites"
+    @experience = Experience.find(params[:experience_id])
+    @favorite = Favorite.create(experience: @experience, user: current_user)
+
+    if @favorite
     else
       redirect_to @experience, alert: "Something went wrong.."
     end
+    if @favorite.save
+      respond_to do |format|
+        format.js
+      end
+    end
+    authorize(@favorite)
   end
 
   def destroy
