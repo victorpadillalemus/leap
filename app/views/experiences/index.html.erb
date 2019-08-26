@@ -43,11 +43,26 @@
   <% @experiences.each do |e| %>
     <div class="card-big">
       <div class="card-image">
-        <% if e.experience_photos.present? %>
-          <% e.experience_photos.each do |p| %>
-            <%= cl_image_tag p.photo %>
-          <% end %>
-        <% end %>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <% if e.experience_photos.present? %>
+              <% e.experience_photos.each_with_index do |p, index| %>
+                <div class="carousel-item <%= 'active' if index == 0  %>">
+                  <img class="d-block w-100" src="<%= cl_image_path p.photo %>" alt="img-<%= index %> ">
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
       </div>
 
       <div class="card-caption">
