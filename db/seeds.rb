@@ -286,7 +286,7 @@ experience15 = Experience.create!(
 
 experience_photo15 = ExperiencePhoto.create!(
   experience: experience15,
-  remote_photo_url: "https://cloudinary.com/console/media_library/asset/image/upload/la_rouge_ykddes"
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566824543/bar_ysig3k.jpg"
   )
 
 experience16 = Experience.create!(
