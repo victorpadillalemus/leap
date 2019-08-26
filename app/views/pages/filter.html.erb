@@ -4,18 +4,19 @@
     <div class="wrap">
       <%= simple_form_for :search, url: experiences_path, method: :get do |f| %>
         <%= f.input :transit_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-          <div class= "slider-container">
+        <div class= "slider-container">
             <div class="slider-1">
+              <%= f.input :arrive, label: false %>
               <h3>Arrival</h3>
               <input type="range" min="1" max="100" value="50" class="slider" id="myRange" name="search[arrival]">
-            </div>
-              <%= f.input :arrive, label: false %>
-            <div class="slider-2">
+             </div>
+
+             <div class="slider-2">
+              <%= f.input :depart, label: false %>
               <h3>Departure</h3>
               <input type="range" min="1" max="100" value="50" class="slider" id="myRange2" name="search[departure]">
-            </div>
-               <%= f.input :depart, label: false %>
-          </div>
+             </div>
+        </div>
     </div>
 
     <div class="passenger-counter">
