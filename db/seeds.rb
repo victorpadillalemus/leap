@@ -46,8 +46,8 @@ experience1 = Experience.create!(
     price:        130.25,
     category:     "Gastronomy",
     duration:     5,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   11,
+    end_time:     21,
     #remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
     airport_id: airport1.id )
 
@@ -63,8 +63,8 @@ experience1 = Experience.create!(
     price:        80,
     category:     "Gastronomy",
     duration:     3,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   18,
+    end_time:     23,
     airport_id: airport1.id )
 
 experience_photo2 = ExperiencePhoto.create!(
@@ -79,8 +79,8 @@ experience1 = Experience.create!(
     price:        90,
     category:     "Gastronomy",
     duration:     3,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   11,
+    end_time:     16,
     airport_id: airport1.id )
 
 experience_photo3 = ExperiencePhoto.create!(
@@ -95,8 +95,8 @@ experience1 = Experience.create!(
     price:        130,
     category:     "Gastronomy",
     duration:     3,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   19,
+    end_time:     24,
     airport_id: airport1.id )
 
 experience_photo4 = ExperiencePhoto.create!(
@@ -111,8 +111,8 @@ experience1 = Experience.create!(
     price:        230,
     category:     "Cultural",
     duration:     8,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   09,
+    end_time:     17,
     airport_id: airport1.id )
 
 experience_photo5 = ExperiencePhoto.create!(
@@ -127,8 +127,8 @@ experience1 = Experience.create!(
     price:        150,
     category:     "Cultural, Gastronomy",
     duration:     5,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   19,
+    end_time:     24,
     airport_id: airport1.id )
 
 experience_photo6 = ExperiencePhoto.create!(
@@ -143,8 +143,8 @@ experience1 = Experience.create!(
     price:        95,
     category:     "Gastronomy",
     duration:     4,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   08,
+    end_time:     16,
     airport_id: airport1.id )
 
 experience_photo7 = ExperiencePhoto.create!(
@@ -159,8 +159,8 @@ experience1 = Experience.create!(
     price:        140,
     category:     "Cultural",
     duration:     4,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   09,
+    end_time:     17,
     airport_id: airport1.id )
 
 experience_photo8 = ExperiencePhoto.create!(
@@ -175,13 +175,109 @@ experience1 = Experience.create!(
     price:        140,
     category:     "Gastronomy",
     duration:     4,
-    start_time:   rand(0..12),
-    end_time:     rand(12..24),
+    start_time:   09,
+    end_time:     17,
     airport_id: airport1.id )
 
 experience_photo9 = ExperiencePhoto.create!(
   experience: experience1,
   remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477392/leap/vineyard_gpxvvz.png"
+  )
+
+experience1 = Experience.create!(
+    title:        "Romantic Jazz and Chill Out Cruise",
+    description:  "The Jazz and Chill Out Sail in Barcelona is a great way to just sit back and enjoy the ride, while listening to live music and taking advantage of the beautiful views that Barcelona’s city skyline has to offer. Experience the luxury and comfort of sailing on board the Catamaran Orsom and enjoy a nice cold drink while you listen to the sounds of the sea and live Jazz and Chill out music.",
+    capacity:     8,
+    price:        20,
+    category:     "Romantic",
+    duration:     3,
+    start_time:   19,
+    end_time:     23),
+    airport_id: airport1.id )
+
+experience_photo10 = ExperiencePhoto.create!(
+  experience: experience1,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566816219/sailing_q17eqz.jpg"
+  )
+
+experience1 = Experience.create!(
+    title:        "Flamenco Night at Tablao Cordobes",
+    description:  "Feel the passion of the flamenco at Barcelona's legendary Tablao Cordobes, where some of the greatest names in flamenco have performed. Entertained by an internationally renowned flamenco group, you'll discover why the traditional dance of Spain is so popular. You'll also have the option of dining on a traditional buffet meal or simply ordering a drink to enjoy while watching the show.",
+    capacity:     6,
+    price:        50,
+    category:     "Romantic",
+    duration:     2,
+    start_time:   19,
+    end_time:     23,
+    airport_id: airport1.id )
+
+experience_photo11 = ExperiencePhoto.create!(
+  experience: experience1,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566816204/flamenco_kvoan1.jpg"
+  )
+
+experience1 = Experience.create!(
+    title:        "Camp Nou - F.C.Barcelona Open Date Ticket",
+    description:  "Discover the authentic essence of Futbol Club Barcelona. You can visit the museum of FC Barcelona, a modern museum, with interactive murals, audiovisuals, new showcases and a collection that will let you know the history of FC Barcelona and understand at the same time the values that make Barça 'More than a club'. You can also visit the press room, the changing rooms and the access tunnel until you reach the playing field; from here, you can enjoy the panoramic view of the entire stadium.",
+    capacity:     12,
+    price:        40,
+    category:     "Family",
+    duration:     3,
+    start_time:   10,
+    end_time:     18,
+    airport_id: airport1.id )
+
+experience_photo12 = ExperiencePhoto.create!(
+  experience: experience1,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566816729/camp_nou_hghaa1.jpg"
+  )
+
+experience1 = Experience.create!(
+    title:        "Girona and Costa Brava Small-Group Tour",
+    description:  "Travel through history in Girona and immerse in the pristine scenery of Costa Brava. Experience a unique landscape along the way and head into the historic town of Girona. Enjoy a walking tour of the Old Town, have a look to the widest Gothic Cathedral in the world and be surprised by the colourful spectacle of the houses along the Onyar River. After the Girona tour, drive to Costa Brava and breath it's unique surroundings and nature.",
+    capacity:     8,
+    price:        95,
+    category:     "Family",
+    duration:     6,
+    start_time:   10,
+    end_time:     18,
+    airport_id: airport1.id )
+
+experience_photo13 = ExperiencePhoto.create!(
+  experience: experience1,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566816145/Girona_lv3glf.jpg"
+  )
+
+experience1 = Experience.create!(
+    title:        "Bar Crawl Barcelona",
+    description:  "Pub crawl Barcelona has been running the best pub crawls in Barcelona since 2007 except nothing less than the best party the city of Barcelona has to offer and sign up for one of our pub crawl´s today!",
+    capacity:     10,
+    price:        15,
+    category:     "Nightlife",
+    duration:     4,
+    start_time:   18,
+    end_time:     09,
+    airport_id: airport1.id )
+
+experience_photo15 = ExperiencePhoto.create!(
+  experience: experience1,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566816314/pub_crawl_v4hcug.jpg"
+  )
+
+experience1 = Experience.create!(
+    title:        "A Night Out in Barcelona",
+    description:  "This is our most local bar in the heart of Barcelona’s most diverse neighbourhoods! This is a night where the dress code is minimal and where coming out of your box is celebrated! Get ready for an exciting night in an area full of interesting characters and stories! La Rouge Bar is a home to the artists of Barcelona and is known for its music, shows and cocktail geniuses. They serve cheap beers and wines, homemade cava and flavorful cocktails.",
+    capacity:     10,
+    price:        20,
+    category:     "Nightlife",
+    duration:     3,
+    start_time:   18,
+    end_time:     09,
+    airport_id: airport1.id )
+
+experience_photo16 = ExperiencePhoto.create!(
+  experience: experience1,
+  remote_photo_url: "https://cloudinary.com/console/media_library/asset/image/upload/la_rouge_ykddes"
   )
 
 experience10 = Experience.create!(
