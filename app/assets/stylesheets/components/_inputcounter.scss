@@ -1,11 +1,24 @@
+.wrap label {
+  font-size: 23px;
+  font-weight: bold;
+}
+
 .page-container {
   margin-top: 0px;
   height: 100vh;
+  background-size: cover;
 }
 
 .filter-container {
   margin: 0 auto;
   width: 90%;
+}
+
+.wrap {
+  height: 75vh;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
 }
 
 .search-button {
@@ -93,11 +106,10 @@ input, .my-auto {
 }
 
 .passenger-counter {
-  margin-top: 20px;
-  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 150px;
 }
 .passanger-counter-header h3 {
   font-size: 22px;
@@ -112,7 +124,7 @@ input, .my-auto {
   font-size: 32px !important;
   font-weight: bold !important;
   line-height: 37px;
-  margin-top: 20px;
+  margin-top: 10px;
 
 }
 

@@ -23,6 +23,10 @@
 
 }
 
+.slider-2 {
+  margin-bottom: 0px;
+}
+
 /* Mouse-over effects */
 .slider:hover {
   opacity: 1; /* Fully shown on mouse-over */
@@ -45,11 +49,6 @@
   border-radius: 50%; /* Slider handle height */
   background: #FF3147; /* Green background */
   cursor: pointer; /* Cursor on hover */
-}
-
-.passenger-counter {
-  display: flex;
-  flex-direction: row;
 }
 
 // .passenger-buttons {

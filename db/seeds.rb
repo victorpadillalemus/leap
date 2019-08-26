@@ -30,6 +30,10 @@ airport1 = Airport.create!(
 name: "Barcelona El Prat",
 address: "El Prat de Llobregat"
   )
+airport2 = Airport.create!(
+name: "Madrid-Barajas Adolfo Suárez Airport",
+address: "Av de la Hispanidad, 28042 Madrid"
+  )
 puts 'Airports Finished!'
 
 
@@ -274,6 +278,118 @@ experience1 = Experience.create!(
 experience_photo16 = ExperiencePhoto.create!(
   experience: experience1,
   remote_photo_url: "https://cloudinary.com/console/media_library/asset/image/upload/la_rouge_ykddes"
+  )
+
+experience10 = Experience.create!(
+    title:        "Stadium Santiago Bernabeu",
+    description:  "Visit the mythical Santiago Bernabeu Stadium with a passionate football guide who will bring you the best of Real Madrid. Real Madrid Stadium is an unique place rich in memories, enter one of the most legendary football club in the world!",
+    capacity:     8,
+    price:        45,
+    category:     "Cultural",
+    duration:     4,
+    start_time:   9,
+    end_time:     20,
+    airport_id: airport2.id )
+
+experience_photo10 = ExperiencePhoto.create!(
+  experience: experience10,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566813018/Santiago_Bernabeu_e3yjjz.jpg"
+  )
+
+experience11 = Experience.create!(
+    title:        "Prado National museum",
+    description:  "Admire some of Europe’s greatest artworks at leisure with admission to the Prado Museum in Madrid. Spain’s leading art museum, the Prado houses an acclaimed European art collection dating from the1300s to the 1900s. Walk through the halls to view masterpieces by Titian, Bosch, Rubens, Velázquez, Goya, and others, including Velázquez’s ‘Les Meninas’ and Bosch’s ‘The Garden of Earthly Delights.’ Choose a regular or mobile ticket for the day of your choosing.",
+    capacity:     6,
+    price:        50,
+    category:     "Cultural",
+    duration:     6,
+    start_time:   10,
+    end_time:     19,
+    airport_id: airport2.id )
+
+experience_photo11 = ExperiencePhoto.create!(
+  experience: experience11,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566813078/Museo_del_Prado_pw0zmi.jpg"
+  )
+
+experience12 = Experience.create!(
+    title:        "Magical - Retiro Park Segway Tour",
+    description:  "Any visit to Madrid happens to go to the Retiro Park, They are 118 Hectares of Serenity and Majestic Beauty in the city. At any time of the year it is worth visiting. Feel the Silence of its gardens, Drive on segway to its impetuous monuments, The Crystal Palace, The Main lake and The Mysterious Fallen Angel ...  Discover its secrets and admire this beautiful park in its entirety.",
+    capacity:     8,
+    price:        40,
+    category:     "Cultural",
+    duration:     4,
+    start_time:   10,
+    end_time:     18,
+    airport_id: airport2.id )
+
+experience_photo12 = ExperiencePhoto.create!(
+  experience: experience12,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566814920/Segway_retiro_park_qptppo.jpg"
+  )
+
+experience13 = Experience.create!(
+    title:        "Flamenco Show in Madrid city center",
+    description:  "Open as a Tablao Flamenco in 1961, La Taberna de Mister Pinkleton, located in the very center of Madrid, offers currently an amazing and different flamenco show while enjoying the best products of the Spanish gastronomy and a huge selection of wine, champagne and spirits labels.The atmosphere of this place is intimate and traditional, full of the Spanish essence and carefully maintained as it has been since the 60´s.",
+    capacity:     4,
+    price:        120,
+    category:     "Cultural",
+    duration:     4,
+    start_time:   16,
+    end_time:     22,
+    airport_id: airport2.id )
+
+experience_photo13 = ExperiencePhoto.create!(
+  experience: experience13,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566813026/flamenco_show_xlnbo9.jpg"
+  )
+
+experience14 = Experience.create!(
+    title:        "Spanish Cooking Master Class",
+    description:  "Learn to cook authentic Spanish dishes under the watchful eye of a local instructor in Madrid! After exploring the tempting food stalls of Torrijos Market (Mercardo de Torrijos), head inside its cooking school to learn the secrets of Spain’s much-loved gastronomy. Make flagship dishes like paella and a Spanish omelette, and taste some typical Spanish red and white wines.",
+    capacity:     6,
+    price:        100,
+    category:     "Cultural",
+    duration:     4,
+    start_time:   15,
+    end_time:     22,
+    airport_id: airport2.id )
+
+experience_photo14 = ExperiencePhoto.create!(
+  experience: experience14,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566815022/Spanish_Cooking3_ww1lht.jpg"
+  )
+
+experience15 = Experience.create!(
+    title:        "Party Bus in Barcelona",
+    description:  "Experience the energy of Barcelona at night on Party-Bus with party-loving guides and an up-for-fun crowd. Explore the city's nightlife alongside a cool group of backpackers, travelers or people just looking for a good time, and go to some of Madrid best bars and clubs.",
+    capacity:     5,
+    price:        60,
+    category:     "nightlife",
+    duration:     4,
+    start_time:   20,
+    end_time:     24,
+    airport_id: airport1.id )
+
+experience_photo15 = ExperiencePhoto.create!(
+  experience: experience15,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566815528/Partybus_madrid_ryal1u.jpg"
+  )
+
+experience16 = Experience.create!(
+    title:        "Mercado San Miguel tour",
+    description:  "High quality culinary adventures abound in this wholesale food market, now one of the most important in Europe. Besides eating on-site, you can buy wrapped and canned food, as well as bottles of wine.",
+    capacity:     4,
+    price:        110,
+    category:     "gastronomy",
+    duration:     4,
+    start_time:   10,
+    end_time:     20,
+    airport_id: airport2.id )
+
+experience_photo16 = ExperiencePhoto.create!(
+  experience: experience16,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566813059/mercado-san-miguel_whtgz3.jpg"
   )
 
 puts 'Finished!'
