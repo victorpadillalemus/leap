@@ -16,21 +16,19 @@
             </div>
                <%= f.input :depart, label: false %>
           </div>
-    </div>
-
-    <div class="passenger-counter">
-      <div class="passanger-counter-header">
-        <h3>Passengers</h3>
-      </div>
-      <div class="passanger-counter-selectors">
-        <span class="minus">-</span>
-        <input type="text" value="1" class="my-auto" name="search[quantity]"/>
-        <span class="plus">+</span>
-      </div>
+          <div class="passenger-counter">
+            <div class="passanger-counter-header">
+              <h3>Passengers</h3>
+            </div>
+            <div class="passanger-counter-selectors">
+              <span class="minus">-</span>
+              <input type="text" value="1" class="my-auto" name="search[quantity]"/>
+              <span class="plus">+</span>
+            </div>
+          </div>
     </div>
     <div class="search-button">
       <input type="hidden" value="<%= params[:home_search][:airport] %>" name="search[airport]">
-
       <%= f.submit "Search", class: "primary-button" %>
     </div>
      <% end %>
