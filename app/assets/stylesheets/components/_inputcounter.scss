@@ -1,45 +1,63 @@
+.page-container {
+  margin-top: 0px;
+  height: 100vh;
+}
+
+.filter-container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.search-button {
+  position: sticky;
+  bottom: 20px;
+  width: 100%;
+}
+
 span {cursor:pointer; }
-    .number{
-      margin:50px;
-      justify-content: center;
-    }
+  .number{
+    margin:20px;
+    justify-content: center;
+  }
 
 .minus {
-      width:40px;
-      height:40px;
-      margin: 0px;
-      background:#6C5B7B;
-      border-radius:50px;
-      padding:1px 5px 8px 5px;
-      border:1px solid #ddd;
-      display: inline-block;
-      vertical-align: middle;
-      text-align: center;
-      font-size: 25px;
-      color: white;
+  width:40px;
+  height:40px;
+  margin: 0px;
+  background:#6C5B7B;
+  border-radius:50px;
+  padding:1px 5px 8px 5px;
+  border:1px solid #ddd;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 25px;
+  color: white;
 }
 
 .plus{
-      width:40px;
-      height:40px;
-      margin: 0px;
-      background:#FF3147;
-      border-radius:50px;
-      padding:1px 5px 8px 5px;
-      border:1px solid #ddd;
-      display: inline-block;
-      vertical-align: middle;
-      text-align: center;
-      font-size: 25px;
-      color: white;
+  width:40px;
+  height:40px;
+  margin: 0px;
+  background:#FF3147;
+  border-radius:50px;
+  padding:1px 5px 8px 5px;
+  border:1px solid #ddd;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 25px;
+  color: white;
 }
-    input, .my-auto {
-      text-align: center;
-      border:0px solid #ddd;
-      display: inline-block;
-      vertical-align: middle;
-      font-size: 22px !important;
-      font-weight: bold !important;
+
+input, .my-auto {
+  text-align: center;
+  border:0px solid #ddd;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 22px !important;
+  font-weight: bold !important;
+  width: 35px;
 }
 
 #myRange {
@@ -62,18 +80,11 @@ span {cursor:pointer; }
       font-weight: bold !important;
 }
 
-.page-container {
-  margin: 0 auto;
-  width: 90%;
-}
 
 .slider-container {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
-.filter-container {
-  height: 85.7vh;
-}
 
 .search-button {
   position: sticky;
@@ -90,7 +101,7 @@ span {cursor:pointer; }
   font-size: 22px;
   line-height: 26px;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -99,7 +110,7 @@ span {cursor:pointer; }
   font-size: 32px !important;
   font-weight: bold !important;
   line-height: 37px;
-  margin-top: 40px;
+  margin-top: 20px;
 
 }
 
@@ -107,13 +118,13 @@ span {cursor:pointer; }
   font-size: 22px !important;
   font-weight: bold !important;
   line-height: 26px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .slider-2 h3 {
   font-size: 22px !important;
   font-weight: bold !important;
   line-height: 26px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
