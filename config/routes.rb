@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'airports/show'
   resources :experiences do
     resources :bookings, only: [:new, :create]
-    resources :favorites, only: [:new, :create]
+    resources :favorites, only: [:create]
   end
   devise_for :users
 

@@ -1,0 +1,11 @@
+<div id="favorites-for-<%= experience.id %>">
+  <% if user_signed_in? && favorite = current_user.favorited?(experience) %>
+  <%= link_to favorite_path(favorite), id: 'favorite_link', method: :delete, remote: true do %>
+      <i class="far fa-heart" style="color: black;"></i>
+    <% end %>
+  <% else %>
+    <%= link_to experience_favorites_path(experience), id: 'favorite_link', method: :post, remote: true do %>
+      <i class="far fa-heart" style="color: red;"></i>
+    <% end %>
+  <% end %>
+</div>
