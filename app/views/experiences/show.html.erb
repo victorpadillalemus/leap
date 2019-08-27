@@ -24,16 +24,6 @@
       <hr>
       <h5>Guest Reviews</h5>
       <br>
-      <div id="reviews">
-        <% if @experience.reviews.present? %>
-          <% @experience.reviews.each do |review| %>
-            <%= render 'reviews/show', review: review %>
-          <% end %>
-        <% else %>
-          Be the first to leave a review for <%= @experience.title %>
-        <% end %>
-      </div>
-
       <!-- <div class="reviews">
       <#%= image_tag "fahad.jpg", class: "avatar", alt: "avatar" %>
         <div>

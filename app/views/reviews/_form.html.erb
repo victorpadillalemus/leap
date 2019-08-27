@@ -1,5 +1,0 @@
-<%= simple_form_for([ experience, review ]) do |form| %>
-  <%= form.input :content, as: :text %>
-  <%= form.rating :rating, collection: 1..5, prompt: "Stars", selected: 5 %>
-  <%= form.button :submit %>
-<% end %>
