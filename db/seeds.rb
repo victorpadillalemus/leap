@@ -25,6 +25,7 @@ puts 'Cleaning database...'
 ExperiencePhoto.destroy_all
 Experience.destroy_all
 Airport.destroy_all
+Attribute.destroy_all
 
 puts 'Creating Airports'
 airport1 = Airport.create!(
@@ -39,7 +40,24 @@ longitude: -3.569692
   )
 puts 'Airports Finished!'
 
+puts 'Creating Attributes'
 
+attribute1 = Attribute.create!(
+name: "WIFI",
+ppu: 10
+  )
+
+attribute1 = Attribute.create!(
+name: "Power Bank",
+ppu: 5
+  )
+
+attribute1 = Attribute.create!(
+name: "Luggage Check",
+ppu: 15
+  )
+
+puts 'Attributes Finished!'
 
 puts 'Creating experiences'
 experience1 = Experience.create!(
