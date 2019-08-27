@@ -2,8 +2,9 @@ class FavoritesController < ApplicationController
   before_action :set_experience, only: [:create]
   before_action :set_favorite, only: :destroy
 
+
   def index
-    @favorites = Favorite.all
+    @favorites = policy_scope(Favorite)
   end
 
   def create
