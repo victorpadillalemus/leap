@@ -22,7 +22,6 @@ class BookingsController < ApplicationController
     if @booking.save
       session[:booking_data] = nil
       redirect_to new_booking_payment_path(@booking)
-
     else
       render "experiences/index"
     end
