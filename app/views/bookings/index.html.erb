@@ -13,6 +13,7 @@
           <%= render 'reviews/show', review: review %>
         <% end %>
         <%= link_to 'Add Review', new_booking_review_path(booking) %>
+        <%= link_to 'Display My Booking', booking_path(booking) %>
         </div>
       <% end %>
       raise

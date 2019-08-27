@@ -1,10 +1,9 @@
 class BookingsController < ApplicationController
 
-
   def index
     @bookings = policy_scope(Booking)
   end
-  
+
   def new
     @booking = Booking.new
   end
@@ -28,7 +27,7 @@ class BookingsController < ApplicationController
   end
 
   def show
-      @qr = RQRCode::QRCode.new('https://github.com/whomwah/rqrcode', :size => 4, :level => :h)
+    @qr = RQRCode::QRCode.new('https://github.com/whomwah/rqrcode', :size => 4, :level => :h)
 
     @booking = current_user.bookings.where(state: 'paid').find(params[:id])
     authorize @booking
@@ -42,6 +41,9 @@ class BookingsController < ApplicationController
   private
 
   def set_dates
+    if !session[:booking_data]
+      redirect_to filter_path
+    end
     if session[:booking_data]['transit_date'].present?
       start = session[:booking_data]['transit_date']
     else
