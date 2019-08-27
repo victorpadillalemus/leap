@@ -1,24 +1,22 @@
 <div class="bookings-reviews">
   <% if @bookings.present? %>
-    <% @bookings.each do |booking| %>
-    <div class="card">
-        title: <%= booking.experience.title%>
-      <br>
-        start: <%= booking.start_datetime %>
-      <br>
-       end: <%= booking.end_datetime %>
-      <br>
-        total: <%= booking.total_price %>
-      <br>
+  <% @bookings.each do |booking| %>
+  <div class="card">
+    title: <%= booking.experience.title%>
+    <br>
+    start: <%= booking.start_datetime %>
+    <br>
+    end: <%= booking.end_datetime %>
+    <br>
     <% booking.reviews.each do |review| %>
     <div class="card-small">
       <%= render 'reviews/show', review: review %>
-    <% end %>
-    </div>
+      <% end %>
       <%= link_to 'Add Review', new_booking_review_path(booking) %>
-    <% end %>
-  <% else %>
-    Would you like to leave a review for your booking>
-  <% end %>
+      <% end %>
+      <% else %>
+      Would you like to leave a review for your booking>
+      <% end %>
+    </div>
   </div>
 </div>
