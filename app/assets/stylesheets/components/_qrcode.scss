@@ -3,6 +3,8 @@ table {
   border-style: none;
   border-color: #0000ff;
   border-collapse: collapse;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 td {
@@ -15,3 +17,4 @@ td {
 
 td.black { border-color: #000; }
 td.white { border-color: #fff; }
+

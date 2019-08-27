@@ -1,20 +1,37 @@
 <div class="booking-container">
   <div class=“confirmation-container”>
-    <div class="confirmation-number">Confirmation # <%= rand(1..9999999999) %></div>
-     <br>
-     <h3>We'll see you soon!</h3>
-     <p>When exiting the terminal, look for one of our team members holding a Leap sign with your name on it!</p>
-     <div class="confirmation-image">
+    <h3>See you at the terminal!</h3>
+    <div class="confirmation-number">Your confirmation number is # <%= rand(1..9999999999) %></div>
+    <br>
+
+    <div class="qrcode-container">
+      <div class ="logo-text-container">
+        <div><i class="fas fa-print"></i> Bring your QR Code</div>
+      </div>
+      <%= raw @qr.as_html %>
+    </div>
+
+    <div class="map-container">
+     <div><i class="fas fa-location-arrow"></i> Find us here</div>
+     <div id="map"
+     style="width: 100%;
+     height: 200px;"data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+     ></div>
+   </div>
+ </div>
+
+ <div class="logo-container">
+   <div><i class="fas fa-eye"></i> Look out for someone holding a Leap sign</div>
+   <div class="confirmation-image">
      <%= image_tag("checkout.jpg") %>
-     <%= raw @qr.as_html %>
-       <div
-    id="map"
-    style="width: 80%;
-    height: 200px;"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-    ></div>
-     </div>
-  </div>
+   </div>
+ </div>
+
 </div>
+ <div class="footer">
+   <%= link_to 'My Bookings', bookings_path(@bookings), class: 'primary-button', method: :get %>
+ </div>
+
+
 
