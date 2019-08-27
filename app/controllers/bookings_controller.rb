@@ -24,6 +24,8 @@ class BookingsController < ApplicationController
   end
 
   def show
+      @qr = RQRCode::QRCode.new('https://github.com/whomwah/rqrcode', :size => 4, :level => :h)
+
     @booking = current_user.bookings.where(state: 'paid').find(params[:id])
     authorize @booking
     @airport = @booking.experience.airport
