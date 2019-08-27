@@ -34,7 +34,8 @@ longitude: 2.070160
   )
 airport2 = Airport.create!(
 name: "Madrid-Barajas Adolfo Suárez Airport",
-address: "Av de la Hispanidad, 28042 Madrid"
+latitude: 40.468280,
+longitude: -3.569692
   )
 puts 'Airports Finished!'
 
