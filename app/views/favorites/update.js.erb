@@ -1,6 +1,6 @@
-function addReviewFavorite(favoriteHTML) {
-  const favorites = document.getElementById('favorites');
-  favorites.insertAdjacentHTML('beforeend', favoriteHTML);
+function refreshFavorite(favoriteHTML) {
+  const fav = document.getElementById('favorites-for-<%= @experience.id %>');
+  fav.outerHTML = favoriteHTML
 }
 
-$('#favorite_link').text("");
+refreshFavorite("<%= j render 'favorites/favorite', experience: @experience %>")

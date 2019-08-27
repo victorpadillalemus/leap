@@ -43,7 +43,7 @@
   <% @experiences.each do |e| %>
     <div class="card-big">
       <div class="card-image">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleControls-<%= e.id %>" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <% if e.experience_photos.present? %>
               <% e.experience_photos.each_with_index do |p, index| %>
@@ -54,11 +54,11 @@
             <% end %>
           </div>
 
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <a class="carousel-control-prev" href="#carouselExampleControls-<%= e.id %>" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <a class="carousel-control-next" href="#carouselExampleControls-<%= e.id %>" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
@@ -79,13 +79,7 @@
           <div><i class="fas fa-history"></i><%= e.duration %></div>
         </div>
           <div class="small-margin-left">
-            <% if Favorite.where(experience_id: e.id).where(user_id: current_user.id).count == 0 %>
-              <%= link_to experience_favorites_path(e), id: 'favorite_link', method: :post do %>
-                <i class="far fa-paper-plane"></i>
-              <% end %>
-            <% else %>
-             <i class="far fa-paper-plane"></i>
-            <% end %>
+            <%= render 'favorites/favorite', experience: e %>
           </div>
         </div>
       </div>

@@ -7,7 +7,12 @@ class User < ApplicationRecord
   has_many :experiences
   has_many :favorites, dependent: :destroy
   has_many :bookings, dependent: :destroy
+
   def send_welcome_email
     UserMailer.with(user: self).welcome.deliver_now
+  end
+
+  def favorited?(experience)
+    favorites.find_by(experience: experience)
   end
 end
