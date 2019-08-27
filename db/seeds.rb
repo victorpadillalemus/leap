@@ -111,7 +111,7 @@ experience1 = Experience.create!(
     price:        230,
     category:     "Cultural",
     duration:     8,
-    start_time:   09,
+    start_time:   9,
     end_time:     17,
     airport_id: airport1.id )
 
@@ -143,7 +143,7 @@ experience1 = Experience.create!(
     price:        95,
     category:     "Gastronomy",
     duration:     4,
-    start_time:   08,
+    start_time:   8,
     end_time:     16,
     airport_id: airport1.id )
 
@@ -159,7 +159,7 @@ experience1 = Experience.create!(
     price:        140,
     category:     "Cultural",
     duration:     4,
-    start_time:   09,
+    start_time:   9,
     end_time:     17,
     airport_id: airport1.id )
 
@@ -175,7 +175,7 @@ experience1 = Experience.create!(
     price:        140,
     category:     "Gastronomy",
     duration:     4,
-    start_time:   09,
+    start_time:   9,
     end_time:     17,
     airport_id: airport1.id )
 
@@ -192,7 +192,7 @@ experience1 = Experience.create!(
     category:     "Romantic",
     duration:     3,
     start_time:   19,
-    end_time:     23),
+    end_time:     23,
     airport_id: airport1.id )
 
 experience_photo10 = ExperiencePhoto.create!(
@@ -256,7 +256,7 @@ experience1 = Experience.create!(
     category:     "Nightlife",
     duration:     4,
     start_time:   18,
-    end_time:     09,
+    end_time:     9,
     airport_id: airport1.id )
 
 experience_photo15 = ExperiencePhoto.create!(
@@ -272,7 +272,7 @@ experience1 = Experience.create!(
     category:     "Nightlife",
     duration:     3,
     start_time:   18,
-    end_time:     09,
+    end_time:     9,
     airport_id: airport1.id )
 
 experience_photo16 = ExperiencePhoto.create!(
