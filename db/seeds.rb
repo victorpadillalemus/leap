@@ -12,10 +12,10 @@ User.destroy_all
 
 puts 'Creating Users'
 user1 = User.create!(
-  email: "ferdi@wagon.com",
+  email: "victor.padilla.lemus@gmail.com",
   password: "password",
-  first_name: "ferdi",
-  last_name: "ferdison",
+  first_name: "victor",
+  last_name: "padilla",
   admin: true
 )
 

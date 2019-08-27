@@ -23,10 +23,11 @@ gem 'money-rails'
 gem 'stripe'
 gem 'carrierwave', '~> 1.2'
 gem 'cloudinary', '~> 1.9.1'
-gem 'letter_opener', group: :development
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+  gem 'dotenv-rails'
+  gem 'letter_opener'
 end
 
 group :development, :test do
@@ -35,7 +36,4 @@ group :development, :test do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'dotenv-rails', groups: [:development, :test]
-
-
 end

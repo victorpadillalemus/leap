@@ -1,0 +1,18 @@
+<div class="booking-container">
+  <div class=“confirmation-container”>
+    <div class="confirmation-number">Confirmation # <%= rand(1..9999999999) %></div>
+     <br>
+     <h3>We'll see you soon!</h3>
+     <p>When exiting the terminal, look for one of our team members holding a Leap sign with your name on it!</p>
+     <div class="confirmation-image">
+     <%= image_tag("checkout.jpg") %>
+       <div
+    id="map"
+    style="width: 80%;
+    height: 200px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+     </div>
+  </div>
+</div>
