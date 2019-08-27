@@ -2,7 +2,13 @@
   <div class="summary">
     <div id="steps">Step 1 of 1</div>
     <h3>Book your leap</h3>
-    <h4 id="summary-title"><%= @experience.title %></h4>
+    <div class="show-image"
+        style="background-image: linear-gradient(180deg, #000000 0%, rgba(49, 69, 242, 0.21) 50%), url(
+        <%= @experience.experience_photos.first.photo %>);">
+    </div>
+    <div class="container">
+      <div class="show-page-caption">
+        <h3><%= @experience.title %></h3>
     <div id="steps">12 people have viewed this leap in the last hour. Travel trends suggest this leap will be booked within the next few hours.</div>
     <hr>
     <div>Your leap starts at: <%= @experience.start_time %>:00</div>
@@ -16,13 +22,13 @@
     <div class="grow"></div>
 
     <br>
-    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-      data-name="<%= @experience.title %>"
-      data-email="<%= current_user.email %>"
-      data-amount= "<%= @booking.amount_cents %>"
-      data-currency="<%= @experience.price_currency %>"></script>
       <% end %>
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+        data-name="<%= @experience.title %>"
+        data-email="<%= current_user.email %>"
+        data-amount= "<%= @booking.amount_cents %>"
+        data-currency="<%= @experience.price_currency %>"></script>
   </div>
 
 
