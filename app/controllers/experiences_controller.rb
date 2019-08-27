@@ -34,6 +34,8 @@ class ExperiencesController < ApplicationController
   end
 
   def show
+    @experience = Experience.find(params[:id])
+    @review = Review.new
   end
 
   def filter

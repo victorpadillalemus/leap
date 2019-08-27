@@ -4,4 +4,5 @@ class Experience < ApplicationRecord
   monetize :price_cents
   has_many :favorites
   has_many :bookings
+  has_many :reviews, through: :bookings
 end
