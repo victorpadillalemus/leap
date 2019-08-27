@@ -4,8 +4,8 @@ class User < ApplicationRecord
   # after_create :send_welcome_email
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :experiences
   has_many :favorites, dependent: :destroy
+  has_many :experiences, through: :favorites
   has_many :bookings, dependent: :destroy
 
   def send_welcome_email
