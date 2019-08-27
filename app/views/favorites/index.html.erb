@@ -1,47 +1,8 @@
-<div class="experiences-header">
-  <h4>See all Experiences</h4>
-  <h6><%= %></h6>
-</div>
+<div class="wish-list-container">
+<h4>Wish List</h4>
 
-<div class="experiences-subheader">
-  <h6>Categories</h6>
-</div>
-
-<div class="horizontal-scrolling-card-container">
-  <%= link_to experiences_path(search: @search_params.dup.merge!({category: "Gastronomy"})) do  %>
-    <div class="card-small" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('paella3.jpg') %>);">Gastronomy
-    </div>
-  <% end %>
-
-  <%= link_to experiences_path(search: @search_params.dup.merge!({category: "Romantic"})) do  %>
-    <div class="card-small" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('romantic.jpg') %>);">Romantic
-    </div>
-    <% end %>
-
-
-    <%= link_to experiences_path(search: @search_params.dup.merge!({category: "Family"})) do  %>
-    <div class="card-small" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('family.jpg') %>);">Family
-    </div>
-    <% end %>
-
-  <%= link_to experiences_path(search: @search_params.dup.merge!({category: "Cultural"})) do  %>
-    <div class="card-small" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('cultural.jpg') %>);">Cultural
-    </div>
-  <% end %>
-
-  <%= link_to experiences_path(search: @search_params.dup.merge!({category: "Nightlife"})) do  %>
-    <div class="card-small" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('nightlife.jpg') %>);">Nightlife
-    </div>
-    <% end %>
-</div>
-
-<div class="experiences-subheader">
-  <h6>Top ranked</h6>
-</div>
-
-<div class="vertical-scrolling-card-container">
-  <% @experiences.each do |e| %>
-    <div class="card-big">
+<% current_user.experiences.each do |e| %>
+<div class="card-big">
       <div class="card-image">
         <div id="carouselExampleControls-<%= e.id %>" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
@@ -84,5 +45,6 @@
         </div>
       </div>
     </div>
-  <% end %>
+    <% end %>
+
 </div>

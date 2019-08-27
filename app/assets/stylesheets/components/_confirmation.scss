@@ -1,6 +1,24 @@
 .confirmation-container {
-  margin: 0 auto;
-  width: 90%;
   display: flex;
   flex-direction: column;
+}
+
+.booking-container {
+  margin: 20px;
+  font-family: Roboto;
+}
+
+.confirmation-image img {
+  width: 100%;
+}
+
+.confirmation-number {
+  font-style: italic;
+  font-weight: lighter;
+  color: grey;
+}
+
+.logo-container {
+margin-top: 20px;
+
 }

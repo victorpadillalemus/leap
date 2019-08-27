@@ -1,0 +1,6 @@
+function refreshFavorite(favoriteHTML) {
+  const fav = document.getElementById('favorites-for-<%= @experience.id %>');
+  fav.outerHTML = favoriteHTML
+}
+
+refreshFavorite("<%= j render 'favorites/favorite', experience: @experience %>")

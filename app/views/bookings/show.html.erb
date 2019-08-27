@@ -1,23 +1,37 @@
-<div class=“confirmation-container”>
-   <h3>Congrats you're taking the leap!</h3>
-   <div>Confirmation #4564ljka</div>
-   <br>
-   <%= image_tag("meet.png") %>
-   <h5>Advice and Recommendations</h5>
-   <ul>
-     <li>Bring confortable walking shoes</li>
-     <li>Beware of your belongings</li>
-     <li>Keep track of your departure time</li>
-     <li>Please check your inbox for any confirmation message</li>
-   </ul>
-   <h5>What to Expect</h5>
-   <br>
-   <p>Pass the crowds outside the Sagrada Familia with this skip-the-line pass and 2 hours tour. In the company of a local guide, you’ll gain priority access to the church towers..</p>
-   <ul>
-     <li>Skip the line</li>
-     <li>Standard access to the towes</li>
-     <li>Local guide</li>
-     <li>Small group</li>
-   </ul>
+<div class="booking-container">
+  <div class=“confirmation-container”>
+    <h3>See you at the terminal!</h3>
+    <div class="confirmation-number">Your confirmation number is # <%= rand(1..9999999999) %></div>
+    <br>
+
+    <div class="qrcode-container">
+      <div class ="logo-text-container">
+        <div><i class="fas fa-print"></i> Bring your QR Code</div>
+      </div>
+      <%= raw @qr.as_html %>
+    </div>
+
+    <div class="map-container">
+     <div><i class="fas fa-location-arrow"></i> Find us here</div>
+     <div id="map"
+     style="width: 100%;
+     height: 200px;"data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+     ></div>
+   </div>
+ </div>
+
+ <div class="logo-container">
+   <div><i class="fas fa-eye"></i> Look out for someone holding a Leap sign</div>
+   <div class="confirmation-image">
+     <%= image_tag("checkout.jpg") %>
+   </div>
+ </div>
+
 </div>
+ <div class="footer">
+   <%= link_to 'My Bookings', bookings_path(@bookings), class: 'primary-button', method: :get %>
+ </div>
+
+
 

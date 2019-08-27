@@ -1,26 +1,39 @@
 class FavoritesController < ApplicationController
-  before_action :set_experience, only: [:create, :destroy]
+  before_action :set_experience, only: [:create]
+  before_action :set_favorite, only: :destroy
+
 
   def index
-    @favorites = Favorite.all
+    @favorites = policy_scope(Favorite)
   end
 
   def create
-    if Favorite.create(favorited: @experience, user: current_user)
-      redirect_to @experience, notice: "Leap has been added to favorites"
-    else
-      redirect_to @experience, alert: "Something went wrong.."
+    @experience = Experience.find(params[:experience_id])
+    @favorite = Favorite.create(experience: @experience, user: current_user)
+    respond_to do |format|
+      format.html { redirect_to experiences_path }
+      format.js { render :update }
     end
+    authorize(@favorite)
   end
 
   def destroy
-    Favorite.where(favorited_id: @experience.id, user: current_user.id).first.destroy
-    redirect_to @experience, notice: "Leap has been deleted from favorites"
+    @experience = @favorite.experience
+    authorize(@favorite)
+    @favorite.destroy
+    respond_to do |format|
+      format.html { redirect_to @experience, notice: "Leap has been deleted from favorites" }
+      format.js { render :update }
+    end
   end
 
   private
 
   def set_experience
     @experience = Experience.find(params[:experience_id] || params[:id])
+  end
+
+  def set_favorite
+    @favorite = Favorite.find(params[:id])
   end
 end
