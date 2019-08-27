@@ -29,7 +29,8 @@ Airport.destroy_all
 puts 'Creating Airports'
 airport1 = Airport.create!(
 name: "Barcelona El Prat",
-address: "El Prat de Llobregat"
+latitude: 41.287787,
+longitude: 2.070160
   )
 airport2 = Airport.create!(
 name: "Madrid-Barajas Adolfo Suárez Airport",

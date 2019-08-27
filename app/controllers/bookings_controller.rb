@@ -12,14 +12,14 @@ class BookingsController < ApplicationController
     # {"transit_date"=>"", "arrival"=>"10", "arrive"=>"12 :30", "departure"=>"23", "depart"=>"19 :00", "quantity"=>"1", "airport"=>"barcelona"}
     @experience = Experience.find(params[:experience_id])
     @booking = Booking.new
+    authorize @booking
+
     set_dates
     @booking.quantity = session[:booking_data]['quantity']
     @booking.experience = @experience
     @booking.user = current_user
     @booking.state = 'pending'
-    authorize @booking
     if @booking.save
-      session[:booking_data] = nil
       redirect_to new_booking_payment_path(@booking)
     else
       render "experiences/index"
@@ -41,9 +41,6 @@ class BookingsController < ApplicationController
   private
 
   def set_dates
-    if !session[:booking_data]
-      redirect_to filter_path
-    end
     if session[:booking_data]['transit_date'].present?
       start = session[:booking_data]['transit_date']
     else
