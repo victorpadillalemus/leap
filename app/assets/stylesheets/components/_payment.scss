@@ -29,7 +29,7 @@
 
 button.stripe-button-el,
 button.stripe-button-el>span {
-  background-color: #f67280 !important;
+  background-color: #FF3147 !important;
   background-image: none;
   display: flex !important;
   justify-content: center;
@@ -44,4 +44,11 @@ button.stripe-button-el>span {
   font-family: Roboto;
   border: 0px;
   width: 100%;
+}
+
+.summary h3 {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: bold;
+  margin-top: 20px;
 }
