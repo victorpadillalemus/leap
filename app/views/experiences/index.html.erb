@@ -80,11 +80,11 @@
         </div>
           <div class="small-margin-left">
             <% if Favorite.where(experience_id: e.id).where(user_id: current_user.id).count == 0 %>
-              <%= link_to experience_favorites_path(e), method: :post do %>
+              <%= link_to experience_favorites_path(e), id: 'favorite_link', method: :post do %>
                 <i class="far fa-paper-plane"></i>
               <% end %>
             <% else %>
-             <i class="fas fa-paper-plane"></i>
+             <i class="far fa-paper-plane"></i>
             <% end %>
           </div>
         </div>

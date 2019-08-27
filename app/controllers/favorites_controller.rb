@@ -8,15 +8,15 @@ class FavoritesController < ApplicationController
   def create
     @experience = Experience.find(params[:experience_id])
     @favorite = Favorite.create(experience: @experience, user: current_user)
-
-    if @favorite
-    else
-      redirect_to @experience, alert: "Something went wrong.."
-    end
     if @favorite.save
-      respond_to do |format|
-        format.js
-      end
+      @favorite_exists = true
+    else
+      @favorite_exists = false
+
+    end
+    respond_to do |format|
+      format.html {}
+      format.js {}
     end
     authorize(@favorite)
   end
