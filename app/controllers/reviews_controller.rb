@@ -4,15 +4,17 @@ class ReviewsController < ApplicationController
 
   def new
     @booking = Booking.find(params[:booking_id])
-    @review = Review.new
+    @review = Review.new(booking: @booking)
+    authorize @review
   end
 
   def create
     @review = Review.new(review_strong_params)
     @booking = Booking.find(params[:booking_id])
     @review.booking = @booking
+    authorize @review
     if @review.save
-      redirect_to user_path(current_user)
+      redirect_to bookings_path
     else
       render :new
     end
