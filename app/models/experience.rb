@@ -4,5 +4,4 @@ class Experience < ApplicationRecord
   monetize :price_cents
   has_many :favorites
   has_many :bookings
-  mount_uploader :photo, PhotoUploader
 end

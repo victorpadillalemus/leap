@@ -14,7 +14,7 @@ class PaymentsController < ApplicationController
 
     charge = Stripe::Charge.create(
       customer: customer.id, # You should store this customer id and re-use it.
-      amount: @booking.total_price,
+      amount: @booking.amount_cents,
       description: "Payment for experience #{@booking.id}",
       currency: @booking.amount.currency
     )
