@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :bookings, only: [:index, :show, :destroy, :create] do
     resources :payments, only: [:new, :create]
     resources :reviews, only: [:index, :new, :create]
+
   end
 
   root to: 'pages#home'
