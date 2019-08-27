@@ -29,11 +29,13 @@ Airport.destroy_all
 puts 'Creating Airports'
 airport1 = Airport.create!(
 name: "Barcelona El Prat",
-address: "El Prat de Llobregat"
+latitude: 41.287787,
+longitude: 2.070160
   )
 airport2 = Airport.create!(
 name: "Madrid-Barajas Adolfo Suárez Airport",
-address: "Av de la Hispanidad, 28042 Madrid"
+latitude: 40.468280,
+longitude: -3.569692
   )
 puts 'Airports Finished!'
 
@@ -58,18 +60,18 @@ experience_photo1 = ExperiencePhoto.create!(
   )
 experience_photo1 = ExperiencePhoto.create!(
   experience: experience1,
-  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477378/leap/tapas_walking_tour_icrgxn.jpg"
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566909807/8fae185541f5c3be45f9694c8ff87698_ku6ukf.jpg"
   )
 experience_photo1 = ExperiencePhoto.create!(
   experience: experience1,
-  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477378/leap/tapas_walking_tour_icrgxn.jpg"
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566909994/e13151a5bc2db516f9ee09cd67387126_gfwinh.jpg"
   )
 
 experience2 = Experience.create!(
     title:        "Dinner at the Beach",
     description:  "An experience where visitors will be taken to a nearby restaurant which is close to the vicinity of the airport and directly on the beach. Dinner is made up of a 5 course seafoodmenu. After dinner, visitors will have the opportunity to relax and enjoy as much free time on the beach as their transit allows for.",
     capacity:     6,
-    price:        80,
+    price:        110,
     category:     "Gastronomy",
     duration:     3,
     start_time:   18,
@@ -129,8 +131,18 @@ experience_photo5 = ExperiencePhoto.create!(
   remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477316/leap/monastery_kgt9fv.jpg"
   )
 
+experience_photo5 = ExperiencePhoto.create!(
+  experience: experience5,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566910116/photo-1544368885-8454aaec2212_ihocoh.jpg"
+  )
+
+experience_photo5 = ExperiencePhoto.create!(
+  experience: experience5,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566910206/photo-1516066311107-77a45f4f6636_qslchf.jpg"
+  )
+
 experience6 = Experience.create!(
-    title:        "Flamenco show & Dinner",
+    title:        "Flamenco Show & Dinner",
     description:  "This experience combines two activities. The first takes you to a historic building in the gothic quarter where you will enjoy a traditional flamenco show. Take in the lively atmosphere of one of Spain’s most famous flamenco venues. After the show, visitors are taken to a selected restaurant in Barcelona’s city center where you can enjoy a tapas tasting menu. to relax and enjoy as much free time on the beach as their transit allows for.",
     capacity:     4,
     price:        150,
@@ -162,7 +174,7 @@ experience_photo7 = ExperiencePhoto.create!(
   )
 
 experience8 = Experience.create!(
-    title:        "Fast-track Sagrada Familia Tourr",
+    title:        "Fast-track Sagrada Familia Tour",
     description:  "Sail past the long lines of tourists to gain entry to Gaudi’s La Sagrada Familia with priority access and pre-booked tickets of the modernist masterpiece. Accompanied a guide you will head straight inside into the history of the UNESCO World Heritage-listed cathedral.",
     capacity:     6,
     price:        140,
@@ -175,6 +187,21 @@ experience8 = Experience.create!(
 experience_photo8 = ExperiencePhoto.create!(
   experience: experience8,
   remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477364/leap/sagrada_familia_xpldrt.jpg"
+  )
+
+experience_photo8 = ExperiencePhoto.create!(
+  experience: experience8,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566911743/Leap/photo-1553342919-2c007a61a33e_q2zo7c.jpg"
+  )
+
+experience_photo8 = ExperiencePhoto.create!(
+  experience: experience8,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566911874/Leap/large_uqaxgs.jpg"
+  )
+
+experience_photo8 = ExperiencePhoto.create!(
+  experience: experience8,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566911938/Leap/23771279148_5d58fc363c_b_g4uveq.jpg"
   )
 
 experience9 = Experience.create!(
@@ -190,7 +217,20 @@ experience9 = Experience.create!(
 
 experience_photo9 = ExperiencePhoto.create!(
   experience: experience9,
-  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477392/leap/vineyard_gpxvvz.png"
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566912353/Leap/photo-1506377247377-2a5b3b417ebb_dlt4rk.jpg"
+  )
+experience_photo9 = ExperiencePhoto.create!(
+  experience: experience9,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566912047/Leap/photo-1515779689357-8b2b205287d3_fgdph0.jpg"
+  )
+experience_photo9 = ExperiencePhoto.create!(
+  experience: experience9,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566912103/Leap/photo-1528823872057-9c018a7a7553_to9tcz.jpg"
+  )
+
+experience_photo9 = ExperiencePhoto.create!(
+  experience: experience9,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566912194/Leap/photo-1561586143-986506dbe6a5_gurrvv.jpg"
   )
 
 experience10 = Experience.create!(
@@ -224,9 +264,13 @@ experience_photo11 = ExperiencePhoto.create!(
   experience: experience11,
   remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566816204/flamenco_kvoan1.jpg"
   )
+experience_photo11 = ExperiencePhoto.create!(
+  experience: experience11,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566912407/Leap/tablao-flamenco-cordobes_ud0nt7.jpg"
+  )
 
 experience12 = Experience.create!(
-    title:        "Camp Nou - F.C.Barcelona Open Date Ticket",
+    title:        "F.C.Barcelona Open Day Ticket",
     description:  "Discover the authentic essence of Futbol Club Barcelona. You can visit the museum of FC Barcelona, a modern museum, with interactive murals, audiovisuals, new showcases and a collection that will let you know the history of FC Barcelona and understand at the same time the values that make Barça 'More than a club'. You can also visit the press room, the changing rooms and the access tunnel until you reach the playing field; from here, you can enjoy the panoramic view of the entire stadium.",
     capacity:     12,
     price:        40,
@@ -241,11 +285,23 @@ experience_photo12 = ExperiencePhoto.create!(
   remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566816729/camp_nou_hghaa1.jpg"
   )
 
+experience_photo12 = ExperiencePhoto.create!(
+  experience: experience12,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566912485/Leap/photo-1558266231-44509f897f20_c98mgs.jpg"
+  )
+
+experience_photo12 = ExperiencePhoto.create!(
+  experience: experience12,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566912562/Leap/photo-1532262757596-f93a9d92f879_ageshf.jpg"
+  )
+
+
+
 experience13 = Experience.create!(
     title:        "Girona and Costa Brava Small-Group Tour",
     description:  "Travel through history in Girona and immerse in the pristine scenery of Costa Brava. Experience a unique landscape along the way and head into the historic town of Girona. Enjoy a walking tour of the Old Town, have a look to the widest Gothic Cathedral in the world and be surprised by the colourful spectacle of the houses along the Onyar River. After the Girona tour, drive to Costa Brava and breath it's unique surroundings and nature.",
     capacity:     8,
-    price:        95,
+    price:        295,
     category:     "Family",
     duration:     6,
     start_time:   10,
@@ -261,7 +317,7 @@ experience14 = Experience.create!(
     title:        "Bar Crawl Barcelona",
     description:  "Pub crawl Barcelona has been running the best pub crawls in Barcelona since 2007 except nothing less than the best party the city of Barcelona has to offer and sign up for one of our pub crawl´s today!",
     capacity:     10,
-    price:        15,
+    price:        105,
     category:     "Nightlife",
     duration:     4,
     start_time:   18,
@@ -277,7 +333,7 @@ experience15 = Experience.create!(
     title:        "A Night Out in Barcelona",
     description:  "This is our most local bar in the heart of Barcelona’s most diverse neighbourhoods! This is a night where the dress code is minimal and where coming out of your box is celebrated! Get ready for an exciting night in an area full of interesting characters and stories! La Rouge Bar is a home to the artists of Barcelona and is known for its music, shows and cocktail geniuses. They serve cheap beers and wines, homemade cava and flavorful cocktails.",
     capacity:     10,
-    price:        20,
+    price:        120,
     category:     "Nightlife",
     duration:     3,
     start_time:   18,
@@ -286,14 +342,26 @@ experience15 = Experience.create!(
 
 experience_photo15 = ExperiencePhoto.create!(
   experience: experience15,
-  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566824543/bar_ysig3k.jpg"
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566911280/Leap/1309081500551_wlagrr.jpg"
+  )
+experience_photo15 = ExperiencePhoto.create!(
+  experience: experience15,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566910635/nightlife-barcelona_mo1dtx.jpg"
+  )
+experience_photo15 = ExperiencePhoto.create!(
+  experience: experience15,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566911215/Leap/barcelona-nightlife-tour-opium_ptq1b5.jpg"
+  )
+experience_photo15 = ExperiencePhoto.create!(
+  experience: experience15,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566911546/Leap/razzmatazz_ya4n5a.jpg"
   )
 
 experience16 = Experience.create!(
     title:        "Stadium Santiago Bernabeu",
     description:  "Visit the mythical Santiago Bernabeu Stadium with a passionate football guide who will bring you the best of Real Madrid. Real Madrid Stadium is an unique place rich in memories, enter one of the most legendary football club in the world!",
     capacity:     8,
-    price:        45,
+    price:        145,
     category:     "Cultural",
     duration:     4,
     start_time:   9,
@@ -309,7 +377,7 @@ experience17 = Experience.create!(
     title:        "Prado National museum",
     description:  "Admire some of Europe’s greatest artworks at leisure with admission to the Prado Museum in Madrid. Spain’s leading art museum, the Prado houses an acclaimed European art collection dating from the1300s to the 1900s. Walk through the halls to view masterpieces by Titian, Bosch, Rubens, Velázquez, Goya, and others, including Velázquez’s ‘Les Meninas’ and Bosch’s ‘The Garden of Earthly Delights.’ Choose a regular or mobile ticket for the day of your choosing.",
     capacity:     6,
-    price:        50,
+    price:        150,
     category:     "Cultural",
     duration:     6,
     start_time:   10,
@@ -322,10 +390,10 @@ experience_photo17 = ExperiencePhoto.create!(
   )
 
 experience18 = Experience.create!(
-    title:        "Magical - Retiro Park Segway Tour",
+    title:        "Retiro Park Segway Tour",
     description:  "Any visit to Madrid happens to go to the Retiro Park, They are 118 Hectares of Serenity and Majestic Beauty in the city. At any time of the year it is worth visiting. Feel the Silence of its gardens, Drive on segway to its impetuous monuments, The Crystal Palace, The Main lake and The Mysterious Fallen Angel ...  Discover its secrets and admire this beautiful park in its entirety.",
     capacity:     8,
-    price:        40,
+    price:        140,
     category:     "Cultural",
     duration:     4,
     start_time:   10,
@@ -357,7 +425,7 @@ experience21 = Experience.create!(
     title:        "Spanish Cooking Master Class",
     description:  "Learn to cook authentic Spanish dishes under the watchful eye of a local instructor in Madrid! After exploring the tempting food stalls of Torrijos Market (Mercardo de Torrijos), head inside its cooking school to learn the secrets of Spain’s much-loved gastronomy. Make flagship dishes like paella and a Spanish omelette, and taste some typical Spanish red and white wines.",
     capacity:     6,
-    price:        100,
+    price:        120,
     category:     "Cultural",
     duration:     4,
     start_time:   15,
@@ -373,8 +441,8 @@ experience22 = Experience.create!(
     title:        "Party Bus in Barcelona",
     description:  "Experience the energy of Barcelona at night on Party-Bus with party-loving guides and an up-for-fun crowd. Explore the city's nightlife alongside a cool group of backpackers, travelers or people just looking for a good time, and go to some of Madrid best bars and clubs.",
     capacity:     5,
-    price:        60,
-    category:     "nightlife",
+    price:        105,
+    category:     "Nightlife",
     duration:     4,
     start_time:   20,
     end_time:     24,
@@ -390,7 +458,7 @@ experience23 = Experience.create!(
     description:  "High quality culinary adventures abound in this wholesale food market, now one of the most important in Europe. Besides eating on-site, you can buy wrapped and canned food, as well as bottles of wine.",
     capacity:     4,
     price:        110,
-    category:     "gastronomy",
+    category:     "Gastronomy",
     duration:     4,
     start_time:   10,
     end_time:     20,
