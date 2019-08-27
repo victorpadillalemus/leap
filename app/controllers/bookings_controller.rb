@@ -17,7 +17,6 @@ class BookingsController < ApplicationController
     @booking.experience = @experience
     @booking.user = current_user
     @booking.state = 'pending'
-    binding.pry
     authorize @booking
     if @booking.save
       session[:booking_data] = nil
