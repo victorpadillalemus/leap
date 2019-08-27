@@ -23,6 +23,8 @@ gem 'money-rails'
 gem 'stripe'
 gem 'carrierwave', '~> 1.2'
 gem 'cloudinary', '~> 1.9.1'
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

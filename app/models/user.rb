@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :experiences, through: :favorites
   has_many :bookings, dependent: :destroy
+  mount_uploader :photo, PhotoUploader
 
   def send_welcome_email
     UserMailer.with(user: self).welcome.deliver_now

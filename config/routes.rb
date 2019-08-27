@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'airports/show'
   resources :experiences do
     resources :bookings, only: [:new, :create]
     resources :favorites, only: [:create]
@@ -14,6 +13,8 @@ Rails.application.routes.draw do
     resources :payments, only: [:new, :create]
     resources :reviews, only: [:index, :new, :create]
   end
+  resources :room_messages
+  resources :rooms
 
   root to: 'pages#home'
   get '/filter', to: 'pages#filter', as: 'filter'
