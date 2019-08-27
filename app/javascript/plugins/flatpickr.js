@@ -6,7 +6,7 @@ const datePicker = document.querySelector(".datepicker");
 if (datePicker) {
   flatpickr(".datepicker", {
     altInput: true,
-    minDate: "tomorrow",
+    minDate: "today",
     disableMobile: "false"
   });
 }
