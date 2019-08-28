@@ -64,23 +64,14 @@ span {cursor:pointer; }
   color: white;
 }
 
-// input, .my-auto {
-//   text-align: center;
-//   border:0px solid #ddd;
-//   display: inline-block;
-//   vertical-align: middle;
-//   font-size: 22px !important;
-//   font-weight: bold !important;
-// }
-
-.your-auto {
+input, .my-auto {
   text-align: center;
   border:0px solid #ddd;
   display: inline-block;
   vertical-align: middle;
   font-size: 22px !important;
   font-weight: bold !important;
-  width: 20px;
+  width: 40px;
 }
 
 #myRange {
@@ -156,4 +147,5 @@ span {cursor:pointer; }
   line-height: 26px;
   margin-top: 20px;
 }
+
 
