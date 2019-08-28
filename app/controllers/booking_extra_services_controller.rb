@@ -18,7 +18,7 @@ class BookingExtraServicesController < ApplicationController
   private
 
   def set_extra_service
-    @service = ExtraService.find(params[:service_id])
+    @service = ExtraService.find(params[:extra_service_id])
   end
 
   def set_booking
