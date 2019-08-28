@@ -40,7 +40,7 @@ longitude: -3.569692
   )
 puts 'Airports Finished!'
 
-puts 'Creating Attributes'
+puts 'Creating Extra Services'
 
 extra_service1 = ExtraService.create!(
 name: "WIFI",

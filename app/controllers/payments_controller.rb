@@ -20,7 +20,6 @@ class PaymentsController < ApplicationController
     )
     authorize :payment
     @booking.update(payment: charge.to_json, state: 'paid')
-    mail = BookingMailer.with(booking: @booking).create_confirmation
     redirect_to booking_path(@booking)
   rescue Stripe::CardError => e
     flash[:alert] = e.message

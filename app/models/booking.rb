@@ -2,8 +2,8 @@ class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :experience
   has_many :reviews, dependent: :destroy
-  has_many :booking_attributes
-  has_many :attributes, through: :booking_attributes
+  has_many :booking_extra_services
+  has_many :extra_services, through: :booking_extra_services
   after_create :set_total_price
   monetize :amount_cents
 
