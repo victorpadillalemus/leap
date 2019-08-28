@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_27_160320) do
+ActiveRecord::Schema.define(version: 2019_08_28_072815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,21 +24,14 @@ ActiveRecord::Schema.define(version: 2019_08_27_160320) do
     t.float "longitude"
   end
 
-  create_table "attributes", force: :cascade do |t|
-    t.string "name"
-    t.integer "ppu"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "booking_attributes", force: :cascade do |t|
+  create_table "booking_extra_services", force: :cascade do |t|
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "attributes_id"
     t.bigint "bookings_id"
-    t.index ["attributes_id"], name: "index_booking_attributes_on_attributes_id"
-    t.index ["bookings_id"], name: "index_booking_attributes_on_bookings_id"
+    t.index ["attributes_id"], name: "index_booking_extra_services_on_attributes_id"
+    t.index ["bookings_id"], name: "index_booking_extra_services_on_bookings_id"
   end
 
   create_table "bookings", force: :cascade do |t|
@@ -81,6 +74,13 @@ ActiveRecord::Schema.define(version: 2019_08_27_160320) do
     t.integer "price_cents", default: 0, null: false
     t.string "price_currency", default: "EUR", null: false
     t.index ["airport_id"], name: "index_experiences_on_airport_id"
+  end
+
+  create_table "extra_services", force: :cascade do |t|
+    t.string "name"
+    t.integer "ppu"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "favorites", force: :cascade do |t|
