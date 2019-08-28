@@ -11,7 +11,7 @@
 }
 
 .wrap {
-  height: 75vh;
+  height: 80vh;
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
@@ -64,7 +64,7 @@ span {cursor:pointer; }
   color: white;
 }
 
-input, .my-auto {
+input, .your-auto {
   text-align: center;
   border:0px solid #ddd;
   display: inline-block;
@@ -148,4 +148,11 @@ input, .my-auto {
   margin-top: 20px;
 }
 
+#search_arrive {
+  border: 0px;
+}
+
+#search_depart {
+  border: 0px;
+}
 
