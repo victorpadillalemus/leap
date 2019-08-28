@@ -25,7 +25,7 @@ puts 'Cleaning database...'
 ExperiencePhoto.destroy_all
 Experience.destroy_all
 Airport.destroy_all
-Attribute.destroy_all
+ExtraService.destroy_all
 
 puts 'Creating Airports'
 airport1 = Airport.create!(
@@ -42,17 +42,17 @@ puts 'Airports Finished!'
 
 puts 'Creating Attributes'
 
-attribute1 = Attribute.create!(
+extra_service1 = ExtraService.create!(
 name: "WIFI",
 ppu: 10
   )
 
-attribute1 = Attribute.create!(
+extra_service2 = ExtraService.create!(
 name: "Power Bank",
 ppu: 5
   )
 
-attribute1 = Attribute.create!(
+extra_service3 = ExtraService.create!(
 name: "Luggage Check",
 ppu: 15
   )
