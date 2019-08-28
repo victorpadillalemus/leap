@@ -3,11 +3,13 @@
     <h3>See you at the terminal!</h3>
     <div class="confirmation-number">Your confirmation number is # <%= rand(1..9999999999) %></div>
     <br>
-    <div><i class="fas fa-print"></i> Save this QR code!</div>
-    <div class="qrcode-container">
-      <div class ="logo-text-container">
+    <div class="qr-container">
+      <div><i class="fas fa-print"></i> Save this QR code!</div>
+      <div class="qrcode-container">
+        <div class ="logo-text-container">
+        </div>
+        <%= image_tag("qr-code.png") %>
       </div>
-      <%= raw @qr.as_html %>
     </div>
 
     <div class="map-container">
@@ -21,7 +23,7 @@
  </div>
 
  <div class="logo-container">
-   <div><i class="fas fa-eye"></i> & look out for someone holding a Leap sign</div>
+   <div><i class="fas fa-eye"></i> Look out for someone holding a Leap sign</div>
    <div class="confirmation-image">
      <%= image_tag("checkout.jpg") %>
    </div>
