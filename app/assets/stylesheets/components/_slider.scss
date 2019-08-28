@@ -19,10 +19,6 @@
   margin-bottom: 50px;
 }
 
-#myRange {
-
-}
-
 .slider-2 {
   margin-bottom: 0px;
 }
@@ -50,8 +46,21 @@
   background: #FF3147; /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
+.transit-time-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
 
-// .passenger-buttons {
-//   display: flex;
-//   flex-direction: row;
-// }
+.transit-time h3 {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.inject-transit-time {
+  font-size: 22px;
+  font-weight: bold;
+}
