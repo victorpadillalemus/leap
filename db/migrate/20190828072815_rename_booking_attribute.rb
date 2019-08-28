@@ -1,5 +1,5 @@
 class RenameBookingAttribute < ActiveRecord::Migration[5.2]
   def change
-    rename_table :booking_attribute, :booking_extra_service
+    rename_table :booking_attributes, :booking_extra_services
   end
 end
