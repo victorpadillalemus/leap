@@ -11,4 +11,8 @@ class Booking < ApplicationRecord
     self.amount = experience.price * quantity
     save
   end
+
+  def has_service?(service)
+    booking_extra_services.find_by(extra_service_id: service.id)
+  end
 end

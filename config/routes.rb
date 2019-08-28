@@ -11,10 +11,13 @@ Rails.application.routes.draw do
   resources :favorites, only: [:index, :destroy]
 
   resources :bookings, only: [:index, :show, :destroy, :create] do
+    resources :booking_extra_services, only: [:create]
     resources :payments, only: [:new, :create]
     resources :reviews, only: [:index, :new, :create]
 
   end
+
+  resources :booking_extra_services, only: :destroy
 
   root to: 'pages#home'
   get '/filter', to: 'pages#filter', as: 'filter'

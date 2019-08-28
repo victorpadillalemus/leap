@@ -73,17 +73,20 @@ button.stripe-button-el>span {
   bottom: 0;
   background-color: #333333;
   transition: .4s;
+  width: 63%;
+    height: 23px;
 }
 
 
 .slider:before {
-  position: absolute;
+ position: absolute;
   content: "";
-  height: 42px;
-  width: 40px;
-  left: 4px;
+  height: 17px;
+  width: 17px;
+  left: 3px;
   bottom: 4px;
   background-color: white;
+  -webkit-transition: .4s;
   transition: .4s;
 }
 
@@ -123,11 +126,5 @@ body {
 
 .centereddiv {
   padding-top:20px;
-}
-
-.subtitle {
-  padding-top:20px;
-  font-family:Times, Serif;
-  font-size:40px;
 }
 
