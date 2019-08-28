@@ -1,44 +1,103 @@
 <div class="payment-container">
-  <div class="summary">
-    <h3>Book your leap</h3>
-    <div class="show-image"
-    style="background-image: linear-gradient(180deg, #000000 0%, rgba(49, 69, 242, 0.21) 50%), url(
-    <%= @experience.experience_photos.first.photo %>);">
+  <div class="payment-booking-header">
+  <h4>Booking Leap details:</h4>
   </div>
-  <div class="container">
-    <div class="show-page-caption">
-      <h3><%= @experience.title %></h3>
-      <div id="steps">12 people have viewed this leap in the last hour. Travel trends suggest this leap will be booked within the next few hours.</div>
-      <hr>
-
-      <% ExtraService.all.each do |service| %>
-        <% if booking_service = @booking.has_service(service) %>
-          <%= link_to service.name, booking_extra_service_path(booking_service), method: :delete, class: "btn btn-primary"  %>
-        <% else %>
-        <%= link_to service.name, booking_booking_extra_services_path(@booking, extra_service_id: service.id), method: :post, class: "btn"  %>
-        <% end %>
-      <% end %>
-
-      <hr>
-      <div>Your leap starts at: <%= @experience.start_time %>:00</div>
-      <div>We'll take you back to the airport for your flight at: <%= @experience.end_time %>:00</div>
-      <%= form_tag booking_payments_path(@booking) do %>
-      <article>
-        <label class="amount">
-          <span>Amount: <%= humanized_money_with_symbol(@booking.amount) %></span>
-        </label>
-      </article>
-      <div class="grow"></div>
-
-      <br>
-      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-      data-name="<%= @experience.title %>"
-      data-email="<%= current_user.email %>"
-      data-amount= "<%= @booking.amount_cents %>"
-      data-currency="<%= @experience.price_currency %>"></script>
-      <% end %>
+    <div class="booking-card-details">
+      <div class="booking-details">
+        <h5>
+          <%= @experience.title %>
+        </h5>
+        <h5>
+          <%= humanized_money_with_symbol(@experience.price) + "   per person"%>
+        </h5>
+      </div>
+      <div class="d-block w-100">
+        <img class="d-block w-100" src="<%= cl_image_path @experience.experience_photos.first %>">
+      </div>
     </div>
+    <hr>
+          <div class="flex-container1">
+            <div><i class="fas fa-map-marked-alt"></i>
+            </div>
+            <div><i class="fas fa-plane-departure"></i>
+            </div>
+            <div><i class="fas fa-history"></i></div>
+            <div><i class="fas fa-users"></i>
+            </div>
+          </div>
+           <div class="flex-container1">
+            <div><%= @experience.start_time %>:00</div>
+            <div><%= @experience.end_time %>:00</div>
+            <div><%= (@experience.end_time - @experience.start_time)  %>:00</div>
+            <div><%=(session[:booking_data]['quantity'])%></div>
+          </div>
+    <hr>
+      <% ExtraService.all.each do |service| %>
+      <div class="flex-container">
+        <% if booking_service = @booking.has_service(service) %>
+          <div class="flex-item">
+            <%= service.name %>
+          </div>
+          <div class="flex-button">
+            <%= link_to service.name, booking_extra_service_path(booking_service), method: :delete, class: "btn btn-primary"  %>
+          </div>
+        <% else %>
+          <div class="flex-item">
+            <%= service.name %>
+          </div>
+           <div class="flex-button">
+            <%= link_to service.name, booking_booking_extra_services_path(@booking, extra_service_id: service.id), method: :post, class: "btn"  %>
+          </div>
+        <% end %>
+      </div>
+      <% end %>
+    <hr>
+      <div class="flex-container">
+        <div class="column-details">
+          <h6>
+            <%= humanized_money_with_symbol(@experience.price) + "  x  " + (session[:booking_data]['quantity'])%>
+          </h6>
+        </div>
+        <div class="experience-subtotal">
+          <%= humanized_money_with_symbol(@experience.price * (session[:booking_data]['quantity']).to_i)%>
+        </div>
+      </div>
+      <% ExtraService.all.each do |service| %>
+      <div class="flex-container">
+        <div class="additional-items">
+          <%= service.name %>
+        </div>
+        <div class="additional-items-cost">
+          <%= service.ppu.present? %>
+        </div>
+      </div>
+      <% end %>
+
+    <hr>
+      <div class="flex-container">
+        <div class="total-word">
+          <h5>Total</h5>
+        </div>
+        <div class="total-price">
+          <%= humanized_money_with_symbol(@booking.amount) %>
+        </div>
+      </div>
+    <hr>
+      <div class="show-page-caption">
+        <div class="show-page-caption-header">
+        </div>
+          <%= form_tag booking_payments_path(@booking) do %>
+        <div id="steps">12 people have viewed this leap in the last hour. Travel trends suggest this leap will be booked within the next few hours.</div>
+      </div>
+</div>
+      <div class="footer">
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+        data-name="<%= @experience.title %>"
+        data-email="<%= current_user.email %>"
+        data-amount= "<%= @booking.amount_cents %>"
+        data-currency="<%= @experience.price_currency %>"></script>
+      </div>
+    <% end %>
 
 
-  </div>
