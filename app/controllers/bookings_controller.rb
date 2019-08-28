@@ -47,7 +47,7 @@ class BookingsController < ApplicationController
       start = Date.today.strftime('%e-%m-%y')
     end
     @booking.start_datetime = start + " " + session[:booking_data]['arrive'].gsub(" ", "")
-    @booking.end_datetime = start + " " +  session[:booking_data]['depart'].gsub(" ", "")
+    @booking.end_datetime = start + " " + session[:booking_data]['depart'].gsub(" ", "")
   end
   # def booking_strong_params
   #   params.require(:booking).permit(:start_datetime, :end_datetime, :quantity)
