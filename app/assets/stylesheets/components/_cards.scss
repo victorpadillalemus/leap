@@ -1,21 +1,19 @@
-.experiences-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  // background-color: white;
-  margin: 8px;
-  margin-top: 30px;
-
+.car-container {
+  margin: 0px auto;
+  width: 95%;
+  margin-top: 40px;
 }
+
 
 .experiences-header h4 {
   font-weight: bold;
   font-size: 22px;
-  line-height: 26px;
+  line-height: 18px;
   font-family: Roboto;
 }
 
 .experiences-header h6 {
+  margin-left: 5px;
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
@@ -24,17 +22,18 @@
 }
 
 .experiences-subheader {
-  margin: 8px;
   margin-top: 10px;
 }
 
 .experiences-subheader h6 {
-  margin: 8px;
+  margin-left: 5px;
   font-size: 16px;
   line-height: 19px;
   color: #8F8F8F;
   font-style: normal;
   font-weight: bold;
+  margin-bottom: 24px;
+  margin-top: 30px;
 }
 
 
@@ -42,7 +41,7 @@
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  margin: 8px;
+  margin: -8px;
   background-color: white;
 
   .card-small {
@@ -65,7 +64,6 @@
 
 .vertical-scrolling-card-container {
   margin-top: 20px;
-  margin: 8px;
 }
 
 .card-big {
@@ -85,7 +83,7 @@
 }
 
 .card-big i {
-    margin-right: 3px;
+    margin-right: 5px;
 }
   .card-image img {
     height: calc(380px - 134px);
@@ -95,7 +93,7 @@
   }
 
   .card-caption{
-    padding: 10px;
+    padding: 12px;
     height: 30%;
     // text-align: center;
     color: black;
@@ -143,7 +141,8 @@
 }
 
 .small-margin-bottom {
-  margin-bottom: 20px;
+    margin-bottom: 16px;
+    margin-top: 4px;
 }
 
 .reviews {
