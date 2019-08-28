@@ -11,6 +11,28 @@
         <h3><%= @experience.title %></h3>
     <div id="steps">12 people have viewed this leap in the last hour. Travel trends suggest this leap will be booked within the next few hours.</div>
     <hr>
+      <!-- <form>
+         <div class="custom-control custom-switch">
+           <input type="checkbox" class="custom-control-input" id="switch">
+           <label class="custom-control-label" for="switch1">WIFI</label>
+         </div>
+         <div class="custom-control custom-switch">
+           <input type="checkbox" class="custom-control-input" id="switch">
+           <label class="custom-control-label" for="switch1">Power Bank</label>
+         </div>
+         <div class="custom-control custom-switch">
+           <input type="checkbox" class="custom-control-input" id="switch">
+           <label class="custom-control-label" for="switch1">Luggage Check</label>
+         </div>
+      </form> -->
+      <div align = "center" class = "centereddiv">
+        <div align = "center" id = "box">
+          <label class = "switch">
+            <input type = "checkbox">
+            <div class = "slider round"></div>
+        </div>
+      </div>
+    <hr>
     <div>Your leap starts at: <%= @experience.start_time %>:00</div>
     <div>We'll take you back to the airport for your flight at: <%= @experience.end_time %>:00</div>
     <%= form_tag booking_payments_path(@booking) do %>
