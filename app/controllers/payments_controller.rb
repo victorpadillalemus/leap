@@ -1,5 +1,5 @@
 class PaymentsController < ApplicationController
-  before_action :set_booking
+  before_action :set_and_update_booking
 
   def new
     @experience = @booking.experience
@@ -28,7 +28,8 @@ class PaymentsController < ApplicationController
 
   private
 
-  def set_booking
+  def set_and_update_booking
     @booking = current_user.bookings.where(state: 'pending').find(params[:booking_id])
   end
+
 end
