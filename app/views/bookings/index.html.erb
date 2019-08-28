@@ -1,13 +1,27 @@
 <div class="bookings-container">
   <h3>Your Bookings</h3>
   <% @bookings.each do |booking| %>
-    <div class="card-product">
-      <img src="<%= booking.experience.experience_photos.first.photo %>" alt="">
-      <div class="card-product-infos">
-        <h2><%= booking.experience.title%></h2>
-        <p><%= booking.start_datetime %></p>
-        <p><%= booking.end_datetime %></p>
-
+    <div id="content">
+      <div class="card-product">
+        <img src="<%= booking.experience.experience_photos.first.photo %>" alt="">
+        <div class="card-product-infos">
+          <h2><%= booking.experience.title%></h2>
+          <p>Date: August 30th</p>
+          <br>
+          <div class="booking-links">
+            <a class="btn btn-outline-primary" href="#nav2<%= booking.id %>"><span>More Info</span></a>
+            <a class="btn btn-outline-primary" href="#nav<%= booking.id %>"><span> Hide</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="expandable" id="nav<%= booking.id %>">
+        <!-- space -->
+      </div>
+      <div class="expandable" id="nav2<%= booking.id %>">
+          <p>Pick-Up: 10:00</p>
+          <p>Drop-Off: 19:00</p>
+          <p>Total Price: € <%= booking.amount_cents / 100 %></p>
+          <!-- ADD STUFF/STYLING HERE FOR THE MORE INFO/HIDE FEATURE -->
       </div>
     </div>
   <% end %>
