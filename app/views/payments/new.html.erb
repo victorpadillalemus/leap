@@ -13,10 +13,10 @@
       <hr>
 
       <% ExtraService.all.each do |service| %>
-        <% if booking_service = @booking.has_service?(service) %>
+        <% if booking_service = @booking.has_service(service) %>
           <%= link_to service.name, booking_extra_service_path(booking_service), method: :delete, class: "btn btn-primary"  %>
         <% else %>
-        <%= link_to service.name, booking_booking_extra_services_path(@booking, service_id: service.id), method: :post, class: "btn"  %>
+        <%= link_to service.name, booking_booking_extra_services_path(@booking, extra_service_id: service.id), method: :post, class: "btn"  %>
         <% end %>
       <% end %>
 

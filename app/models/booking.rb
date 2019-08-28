@@ -12,7 +12,7 @@ class Booking < ApplicationRecord
     save
   end
 
-  def has_service?(service)
+  def has_service(service)
     booking_extra_services.find_by(extra_service_id: service.id)
   end
 end
