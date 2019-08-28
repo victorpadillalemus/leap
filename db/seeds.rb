@@ -100,6 +100,16 @@ experience_photo2 = ExperiencePhoto.create!(
   experience: experience2,
   remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477273/leap/beach_dinner_ylocub.jpg"
   )
+experience_photo2 = ExperiencePhoto.create!(
+  experience: experience2,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566987569/Leap/acj-2804-chennai-beach-restaurant-cover_znpcnv.jpg"
+  )
+experience_photo2 = ExperiencePhoto.create!(
+  experience: experience2,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566987873/Leap/romantic-dinner-on-the_scfrbi.jpg"
+  )
+
+
 
 experience3 = Experience.create!(
     title:         "Traditional Paella Lunch",
@@ -117,6 +127,21 @@ experience_photo3 = ExperiencePhoto.create!(
   remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477329/leap/paella_j86eqn.jpg"
   )
 
+experience_photo3 = ExperiencePhoto.create!(
+  experience: experience3,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566987284/Leap/photo-1512058533999-106ee01bf777_v6bmd3.jpg"
+  )
+
+experience_photo3 = ExperiencePhoto.create!(
+  experience: experience3,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566987228/Leap/photo-1515443961218-a51367888e4b_qrvden.jpg"
+  )
+
+experience_photo3 = ExperiencePhoto.create!(
+  experience: experience3,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477329/leap/paella_j86eqn.jpg"
+  )
+
 experience4 = Experience.create!(
     title:        "Rooftop Wine & Dine",
     description:  "This tour takes you to one of Barcelona ́s many amazing rooftops, with views of the entire city. The experience includes a traditional Catalan dinner for two, based on seasonal ingredients, with the possibility to take a dip in the hotel rooftop pool.",
@@ -128,6 +153,18 @@ experience4 = Experience.create!(
     end_time:     24,
     airport_id: airport1.id )
 
+experience_photo4 = ExperiencePhoto.create!(
+  experience: experience4,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477345/leap/rooftop_wine_r4czra.jpg"
+  )
+experience_photo4 = ExperiencePhoto.create!(
+  experience: experience4,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566986752/Leap/roof-bar-mercer_lwgpxy.jpg"
+  )
+experience_photo4 = ExperiencePhoto.create!(
+  experience: experience4,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566986698/Leap/rooftop-pic_dnkxtd.jpg"
+  )
 experience_photo4 = ExperiencePhoto.create!(
   experience: experience4,
   remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477345/leap/rooftop_wine_r4czra.jpg"
@@ -158,6 +195,15 @@ experience_photo5 = ExperiencePhoto.create!(
   experience: experience5,
   remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566910206/photo-1516066311107-77a45f4f6636_qslchf.jpg"
   )
+experience_photo5 = ExperiencePhoto.create!(
+  experience: experience5,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566986078/Leap/photo-1516575049581-fba910464d84_lxdczg.jpg"
+  )
+experience_photo5 = ExperiencePhoto.create!(
+  experience: experience5,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566985968/Leap/photo-1544368885-8454aaec2212_k8xgxn.jpg"
+  )
+
 
 experience6 = Experience.create!(
     title:        "Flamenco Show & Dinner",
@@ -172,8 +218,24 @@ experience6 = Experience.create!(
 
 experience_photo6 = ExperiencePhoto.create!(
   experience: experience6,
-  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477302/leap/flamenco_awdufl.jpg"
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566985684/Leap/70_rstsdg.jpg"
   )
+
+experience_photo6 = ExperiencePhoto.create!(
+  experience: experience6,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566985492/Leap/photo-1513882255491-180123da744e_u8wy3u.jpg"
+  )
+
+experience_photo6 = ExperiencePhoto.create!(
+  experience: experience6,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566985748/Leap/28_xxrkdh.jpg"
+  )
+
+experience_photo6 = ExperiencePhoto.create!(
+  experience: experience6,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566985559/Leap/photo-1548694033-ca07df7e0a49_scmmd8.jpg"
+  )
+
 
 experience7 = Experience.create!(
     title:        "Brunch in the city",
@@ -189,6 +251,21 @@ experience7 = Experience.create!(
 experience_photo7 = ExperiencePhoto.create!(
   experience: experience7,
   remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566477290/leap/brunch_qsyyzr.jpg"
+  )
+
+experience_photo7 = ExperiencePhoto.create!(
+  experience: experience7,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566984896/Leap/photo-1516213335993-159eca2981af_ubchn1.jpg"
+  )
+
+experience_photo7 = ExperiencePhoto.create!(
+  experience: experience7,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566984969/Leap/photo-1558383409-ab7ef8db3e01_pld9d2.jpg"
+  )
+
+experience_photo7 = ExperiencePhoto.create!(
+  experience: experience7,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566985064/Leap/photo-1503442947665-4c7bb47d5daf_iitjgv.jpg"
   )
 
 experience8 = Experience.create!(
@@ -255,7 +332,7 @@ experience10 = Experience.create!(
     title:        "Romantic Jazz and Chill Out Cruise",
     description:  "The Jazz and Chill Out Sail in Barcelona is a great way to just sit back and enjoy the ride, while listening to live music and taking advantage of the beautiful views that Barcelona’s city skyline has to offer. Experience the luxury and comfort of sailing on board the Catamaran Orsom and enjoy a nice cold drink while you listen to the sounds of the sea and live Jazz and Chill out music.",
     capacity:     8,
-    price:        20,
+    price:        180,
     category:     "Romantic",
     duration:     3,
     start_time:   19,
@@ -266,6 +343,23 @@ experience_photo10 = ExperiencePhoto.create!(
   experience: experience10,
   remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566816219/sailing_q17eqz.jpg"
   )
+
+experience_photo10 = ExperiencePhoto.create!(
+  experience: experience10,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566980759/Leap/photo-1505433178243-4eed56f9f3a6_vuf050.jpg"
+  )
+
+experience_photo10 = ExperiencePhoto.create!(
+  experience: experience10,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566980941/Leap/photo-1503486607414-36dc2d9f3eba_ggcudy.jpg"
+  )
+
+experience_photo10 = ExperiencePhoto.create!(
+  experience: experience10,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566984603/Leap/photo-1504434026032-a7e440a30b68_r0v2za.jpg"
+  )
+
+
 
 experience11 = Experience.create!(
     title:        "Flamenco Night at Tablao Cordobes",
@@ -285,6 +379,11 @@ experience_photo11 = ExperiencePhoto.create!(
 experience_photo11 = ExperiencePhoto.create!(
   experience: experience11,
   remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566912407/Leap/tablao-flamenco-cordobes_ud0nt7.jpg"
+  )
+
+experience_photo11 = ExperiencePhoto.create!(
+  experience: experience11,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566981053/Leap/photo-1533854257392-71c5ff28dff7_kuqap0.jpg"
   )
 
 experience12 = Experience.create!(
@@ -313,6 +412,12 @@ experience_photo12 = ExperiencePhoto.create!(
   remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566912562/Leap/photo-1532262757596-f93a9d92f879_ageshf.jpg"
   )
 
+experience_photo12 = ExperiencePhoto.create!(
+  experience: experience12,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566984450/Leap/photo-1565483276060-e6730c0cc6a1_mfe0a3.jpg"
+  )
+
+
 
 
 experience13 = Experience.create!(
@@ -331,6 +436,22 @@ experience_photo13 = ExperiencePhoto.create!(
   remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566816145/Girona_lv3glf.jpg"
   )
 
+experience_photo13 = ExperiencePhoto.create!(
+  experience: experience13,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566984115/Leap/photo-1564818804911-58cfd9b18711_tmpula.jpg"
+  )
+
+experience_photo13 = ExperiencePhoto.create!(
+  experience: experience13,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566984230/Leap/photo-1543633550-7091713de6c3_cqyjer.jpg"
+  )
+
+experience_photo13 = ExperiencePhoto.create!(
+  experience: experience13,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566984319/Leap/photo-1530653042608-d882fc134580_apozme.jpg"
+  )
+
+
 experience14 = Experience.create!(
     title:        "Bar Crawl Barcelona",
     description:  "Pub crawl Barcelona has been running the best pub crawls in Barcelona since 2007 except nothing less than the best party the city of Barcelona has to offer and sign up for one of our pub crawl´s today!",
@@ -344,7 +465,15 @@ experience14 = Experience.create!(
 
 experience_photo14 = ExperiencePhoto.create!(
   experience: experience14,
-  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566816314/pub_crawl_v4hcug.jpg"
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566981217/Leap/photo-1437418747212-8d9709afab22_rimxv2.jpg"
+  )
+experience_photo14 = ExperiencePhoto.create!(
+  experience: experience14,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566982040/Leap/photo-1470338745628-171cf53de3a8_qacyqz.jpg"
+  )
+experience_photo14 = ExperiencePhoto.create!(
+  experience: experience14,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566982111/Leap/photo-1529502669403-c073b74fcefb_hk2ri1.jpg"
   )
 
 experience15 = Experience.create!(
@@ -373,6 +502,10 @@ experience_photo15 = ExperiencePhoto.create!(
 experience_photo15 = ExperiencePhoto.create!(
   experience: experience15,
   remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566911546/Leap/razzmatazz_ya4n5a.jpg"
+  )
+experience_photo15 = ExperiencePhoto.create!(
+  experience: experience15,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566982206/Leap/photo-1536626064922-49e65368b27d_wnodha.jpg"
   )
 
 experience16 = Experience.create!(
@@ -448,12 +581,27 @@ experience21 = Experience.create!(
     duration:     4,
     start_time:   15,
     end_time:     22,
-    airport_id: airport2.id )
+    airport_id: airport1.id )
 
 experience_photo21 = ExperiencePhoto.create!(
   experience: experience21,
   remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566815022/Spanish_Cooking3_ww1lht.jpg"
   )
+experience_photo21 = ExperiencePhoto.create!(
+  experience: experience21,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566982404/Leap/photo-1551218808-94e220e084d2_frb1ld.jpg"
+  )
+experience_photo21 = ExperiencePhoto.create!(
+  experience: experience21,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566982578/Leap/photo-1513135467880-6c41603bbb5b_iieubo.jpg"
+  )
+experience_photo21 = ExperiencePhoto.create!(
+  experience: experience21,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566982662/Leap/photo-1523143093721-2cb542ba354d_hogsom.jpg"
+  )
+
+
+
 
 experience22 = Experience.create!(
     title:        "Party Bus in Barcelona",
@@ -468,8 +616,22 @@ experience22 = Experience.create!(
 
 experience_photo22 = ExperiencePhoto.create!(
   experience: experience22,
-  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566815528/Partybus_madrid_ryal1u.jpg"
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566982857/Leap/photo-1548785620-9a66a1148183_gpkbwy.jpg"
   )
+experience_photo22 = ExperiencePhoto.create!(
+  experience: experience22,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566983310/Leap/photo-1471421298428-1513ab720a8e_xoyrwd.jpg"
+  )
+experience_photo22 = ExperiencePhoto.create!(
+  experience: experience22,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566983605/Leap/photo-1513309914637-65c20a5962e1_z8hnzq.jpg"
+  )
+experience_photo22 = ExperiencePhoto.create!(
+  experience: experience22,
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566983943/Leap/photo-1485872299829-c673f5194813_dng6us.jpg"
+  )
+
+
 
 experience23 = Experience.create!(
     title:        "Mercado San Miguel tour",
