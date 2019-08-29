@@ -6,13 +6,22 @@ class BookingExtraServicesController < ApplicationController
   def create
     @extra_service = BookingExtraService.create(booking: @booking, extra_service: @service)
     authorize :favorite, :create?
-    redirect_to new_booking_payment_path(@booking)
+
+    respond_to do |format|
+      format.html { redirect_to new_booking_payment_path(@booking) }
+      format.js
+    end
   end
 
   def destroy
     @bes.destroy
     authorize :favorite, :create?
-    redirect_to new_booking_payment_path(@bes.booking)
+    @booking = @bes.booking
+    @service = @bes.extra_service
+    respond_to do |format|
+      format.html { redirect_to new_booking_payment_path(@booking) }
+      format.js
+    end
   end
 
   private

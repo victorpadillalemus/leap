@@ -32,25 +32,13 @@
             <div><%=(session[:booking_data]['quantity'])%></div>
           </div>
     <hr>
+    <div class="extra-services-container">
       <% ExtraService.all.each do |service| %>
-      <div class="flex-container">
-        <% if booking_service = @booking.has_service(service) %>
-          <div class="flex-item">
-            <%= service.name %>
-          </div>
-          <div class="flex-button">
-            <%= link_to service.name, booking_extra_service_path(booking_service), method: :delete, class: "btn btn-primary"  %>
-          </div>
-        <% else %>
-          <div class="flex-item">
-            <%= service.name %>
-          </div>
-           <div class="flex-button">
-            <%= link_to service.name, booking_booking_extra_services_path(@booking, extra_service_id: service.id), method: :post, class: "btn"  %>
-          </div>
-        <% end %>
+      <div class="service-container-<%= service.id %> ">
+        <%= render "extra_service_card", service: service %>
       </div>
       <% end %>
+  </div>
     <hr>
       <div class="flex-container">
         <div class="column-details">
@@ -62,24 +50,20 @@
           <%= humanized_money_with_symbol(@experience.price * (session[:booking_data]['quantity']).to_i)%>
         </div>
       </div>
+      <div class="extra-services-price-container">
       <% ExtraService.all.each do |service| %>
-      <div class="flex-container">
-        <div class="additional-items">
-          <%= service.name %>
-        </div>
-        <div class="additional-items-cost">
-          <%= service.ppu.present? %>
-        </div>
+      <div class="service-price-container-<%= service.id %> ">
+        <%=  render "extra_service_price_card", service: service %>
       </div>
       <% end %>
-
+    </div>
     <hr>
       <div class="flex-container">
         <div class="total-word">
           <h5>Total</h5>
         </div>
-        <div class="total-price">
-          <%= humanized_money_with_symbol(@booking.amount) %>
+        <div class="booking-total-container">
+          <%= render "booking_total_price", booking: @booking %>
         </div>
       </div>
     <hr>
