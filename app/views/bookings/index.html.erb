@@ -1,6 +1,12 @@
-<div class="bookings-container">
-  <h3>Your Bookings</h3>
-  <% @bookings.each do |booking| %>
+<div class="fav-container">
+  <div class="wish-list-container-header">
+    <h4>Your Bookings</h4>
+  </div>
+    <div class="wish-list-container-subheader">
+      <h6>in Barcelona</h6>
+    </div>
+  <div class="bookings-container">
+    <% @bookings.each do |booking| %>
     <div id="content">
       <div class="card-product">
         <img src="<%= booking.experience.experience_photos.first.photo %>" alt="">
@@ -8,14 +14,14 @@
           <div class="booking-link">
             <h2><%= link_to booking.experience.title, booking_path(booking)%></h2>
           </div>
-            <div>
-              <p>Date: <%= booking.start_datetime.strftime("%d %B %Y") %></p>
-              <p>Arrival: <%= booking.experience.start_time %>:00</p>
-              <p>Departure: <%= booking.experience.end_time %>:00</p>
-            </div>
+          <div>
+            <p>Date: <%= booking.start_datetime.strftime("%d %B %Y") %></p>
+            <p>Arrival: <%= booking.experience.start_time %>:00</p>
+            <p>Departure: <%= booking.experience.end_time %>:00</p>
+          </div>
         </div>
       </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
-
