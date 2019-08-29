@@ -49,7 +49,7 @@
       </div>
     </div>
     <div class="footer">
-      <%= link_to humanized_money_with_symbol((@experience.price)* (session[:booking_data]['quantity']).to_i) + "     ||      " + '  Book now', experience_bookings_path(@experience), class: 'primary-button', method: :post  %>
+      <%= link_to humanized_money_with_symbol((@experience.price)* (session[:booking_data]['quantity']).to_i) + "     /      " + '  Book now', experience_bookings_path(@experience), class: 'primary-button', method: :post  %>
     </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 .payment-container {
   margin: 0px auto;
-  width: 95%;
+  width: 90%;
   margin-top: 40px;
 }
 
@@ -20,8 +20,16 @@
 
 .booking-card-details {
   display: flex;
-  margin: 20px;
-  align-items:center;
+  margin-top: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.payment-card-image{
+  img {
+    max-width: 120px;
+    margin-right: 10px;
+  }
 }
 
 .flex-container {
@@ -36,10 +44,14 @@
   align-items:center;
 }
 
-.booking-details h5 {
-  font-size: 16px;
+.booking-details {
+  flex-grow: 1;
 }
 
+.booking-details h5 {
+  font-size: 14px;
+  font-weight: bold;
+}
 
 
 #steps {
@@ -90,12 +102,38 @@ button.stripe-button-el>span {
   font-family: Roboto;
 }
 
-.d-block img{
-  width: 50%;
+.extra-services-container {
+  margin: 10px;
 }
 
+.extra-services-price-container {
+  margin: 10px;
+}
 
+.btnbtn-success {
+  background-color: #3145F2;
+}
 
+.btnbtn-danger {
+  background-color: #FF3147;
+}
+#btn-circle {
+    width: 22px;
+    height: 22px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
+.flex-container {
+  margin-top: 10px;
+}
+
+.flex-button {
+  align-items: middle;
+}
 // .switch {
 //   position: relative;
 //   display: inline-block;

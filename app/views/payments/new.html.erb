@@ -11,7 +11,7 @@
           <%= humanized_money_with_symbol(@experience.price) + "   per person"%>
         </h5>
       </div>
-      <div class="d-block w-100">
+      <div class="payment-card-image">
         <img src="<%= @booking.experience.experience_photos.first.photo %>" alt="">
       </div>
     </div>
@@ -40,6 +40,7 @@
       <% end %>
   </div>
     <hr>
+      <div class="extra-services-price-container">
       <div class="flex-container">
         <div class="column-details">
           <h6>
@@ -50,27 +51,25 @@
           <%= humanized_money_with_symbol(@experience.price * (session[:booking_data]['quantity']).to_i)%>
         </div>
       </div>
-      <div class="extra-services-price-container">
       <% ExtraService.all.each do |service| %>
       <div class="service-price-container-<%= service.id %> ">
         <%=  render "extra_service_price_card", service: service %>
       </div>
       <% end %>
-    </div>
     <hr>
       <div class="flex-container">
         <div class="total-word">
-          <h5>Total</h5>
+          <h5><strong>Total</strong></h5>
         </div>
-        <div class="booking-total-container">
-          <%= render "booking_total_price", booking: @booking %>
+        <div class="booking-total-container"><strong>
+          <%= render "booking_total_price", booking: @booking %></strong>
         </div>
       </div>
+    </div>
     <hr>
       <div class="show-page-caption">
         <div class="show-page-caption-header">
         </div>
-        <div id="steps">12 people have viewed this leap in the last hour. Travel trends suggest this leap will be booked within the next few hours.</div>
       </div>
 </div>
       <div class="footer">
