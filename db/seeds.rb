@@ -399,7 +399,7 @@ experience12 = Experience.create!(
 
 experience_photo12 = ExperiencePhoto.create!(
   experience: experience12,
-  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566816729/camp_nou_hghaa1.jpg"
+  remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1567067041/Leap/photo-1542683305-710078a12f73_hvkwkk.jpg"
   )
 
 experience_photo12 = ExperiencePhoto.create!(
@@ -630,9 +630,6 @@ experience_photo22 = ExperiencePhoto.create!(
   experience: experience22,
   remote_photo_url: "https://res.cloudinary.com/drrqe1a7m/image/upload/v1566983943/Leap/photo-1485872299829-c673f5194813_dng6us.jpg"
   )
-
-
-
 experience23 = Experience.create!(
     title:        "Mercado San Miguel tour",
     description:  "High quality culinary adventures abound in this wholesale food market, now one of the most important in Europe. Besides eating on-site, you can buy wrapped and canned food, as well as bottles of wine.",
