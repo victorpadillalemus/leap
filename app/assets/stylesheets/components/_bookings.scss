@@ -1,31 +1,53 @@
-.booking-container {
-  margin: 0 auto;
-  width: 90%;
-  text-align: center;
-}
-
-.qrcode-container {
-  margin: 0 auto;
+.confirmation-page {
+  height: 100vh;
+  background: linear-gradient(180deg, #6c5b7b 50%, white 50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 150px;
-  width: 150px !important;
-  background: white;
-  height: 150px;
+}
+
+.avatar-large {
+  width: 100px;
+  border-radius: 50%;
+  margin-top: -50px;
+}
+
+.map-container {
+  text-align: center;
+  margin-top: 20px;
+  width: 90% !important;
+}
+
+.qr-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  height: 350px;
+  background-color: white;
+  width: 70%;
   border-radius: 5px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
 
-.qr-container {
+.qr-card .confirmation-number {
   margin-bottom: 20px;
 }
 
-.logo-container {
-  margin-top: 30px;
+.qr-card h4 {
+  margin-bottom: 20px;
 }
 
+.qrcode-container {
+  margin-top: 10px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  img {
+    height: 100px;
+    width: 100px;
+  }
+}
 
 .card-product {
   overflow: hidden;
@@ -59,16 +81,6 @@
 
 .card-product .card-product-infos {
   padding: 16px;
-}
-
-.qrcode-container {
-  margin: 0 auto;
-  width: 325px;
-}
-
-.qrcode-container img {
-  height: 100px;
-  width: 100px;
 }
 
 .booking-links {
