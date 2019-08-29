@@ -5,10 +5,10 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.welcome.subject
   #
-  def welcome
-    @user = params[:user]
-    @greeting = "Hi leaper, we would like to thank you, for choosing Leap"
+  # def welcome
+  #   @user = params[:user]
+  #   @greeting = "Hi leaper, we would like to thank you, for choosing Leap"
 
-    mail(to: @user.email, subject: "Welcome to The Leap")
-  end
+  #   mail(to: @user.email, subject: "Welcome to The Leap")
+  # end
 end
