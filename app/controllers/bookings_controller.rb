@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
 
   def index
-    @bookings = policy_scope(Booking)
+    @bookings = policy_scope(Booking.where(user: current_user))
   end
 
   def new
@@ -28,8 +28,7 @@ class BookingsController < ApplicationController
 
   def show
     @qr = RQRCode::QRCode.new('https://github.com/whomwah/rqrcode', :size => 4, :level => :h)
-
-    @booking = current_user.bookings.where(state: 'paid').find(params[:id])
+    @booking = Booking.find(params[:id])
     authorize @booking
     @airport = @booking.experience.airport
     @markers = [{
