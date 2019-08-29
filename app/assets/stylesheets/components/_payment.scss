@@ -21,6 +21,7 @@
 .booking-card-details {
   display: flex;
   margin: 20px;
+  align-items:center;
 }
 
 .flex-container {
@@ -88,6 +89,12 @@ button.stripe-button-el>span {
   line-height: 18px;
   font-family: Roboto;
 }
+
+.d-block img{
+  width: 50%;
+}
+
+
 
 // .switch {
 //   position: relative;

@@ -1,6 +1,12 @@
 <div class="background"
     style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('leap_background.jpg') %>);">
+
   <div class="hp-container">
+    <div class="logo">
+      <%= link_to root_path do  %>
+        <%= image_tag("leap-logo.png", width: '65') %>
+      <% end %>
+    </div>
     <!-- space -->
     <div class="slogan">
       <h1>Love Your Layover</h1>
