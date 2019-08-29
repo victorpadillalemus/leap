@@ -1,0 +1,9 @@
+document.querySelector(".service-card-<%= @service.id %>").remove()
+document.querySelector(".service-container-<%= @service.id %>").innerHTML = "<%= j render 'payments/extra_service_card', service: @service %>"
+
+
+document.querySelector(".service-card-price-<%= @service.id %>").remove()
+document.querySelector(".service-price-container-<%= @service.id %>").innerHTML = "<%= j render 'payments/extra_service_price_card', service: @service %>"
+
+document.querySelector(".total-price").remove()
+document.querySelector(".booking-total-container").innerHTML = "<%= j render 'payments/booking_total_price', booking: @booking %>"

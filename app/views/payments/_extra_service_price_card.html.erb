@@ -1,0 +1,12 @@
+<div class="flex-container service-card-price-<%= service.id %>">
+  <div class="additional-items">
+    <%= service.name %>
+  </div>
+  <div class="additional-items-cost">
+    <% if booking_service = @booking.has_service(service) %>
+      <%= service.ppu %>
+    <% else %>
+      -
+    <% end %>
+  </div>
+</div>
