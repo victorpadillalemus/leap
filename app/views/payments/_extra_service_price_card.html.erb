@@ -4,7 +4,7 @@
   </div>
   <div class="additional-items-cost">
     <% if booking_service = @booking.has_service(service) %>
-      <%= service.ppu %>
+      €<%= service.ppu %>
     <% else %>
       -
     <% end %>
