@@ -9,7 +9,7 @@ class BookingExtraService < ApplicationRecord
 
   def update_booking_price
     total = booking.extra_services.pluck(:ppu).sum * 100
-    booking.amount_cents = total + booking.experience.price_cents
+    booking.amount_cents = total + (booking.experience.price_cents * booking.quantity)
     booking.save
   end
 end
