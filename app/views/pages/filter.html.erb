@@ -6,7 +6,7 @@
       <%= f.input :transit_date, as: :string, required: false, input_html: {class: "datepicker"} %>
       <div class= "slider-container">
         <div class="slider-1">
-          <h3>Arrival</h3>
+          <h3>Arrival:</h3>
           <%= f.input :arrive, label: false %>
           <input type="range" min="1" max="100" value="0" class="slider" id="myRange" name="search[arrival]">
         </div>
@@ -19,7 +19,7 @@
       </div>
       <div class="transit-time-container">
         <div class="transit-time">
-          <h3>Transit time</h3>
+          <h3>Transit time:</h3>
         </div>
         <div class="inject-transit-time"></div>
         <div></div>
