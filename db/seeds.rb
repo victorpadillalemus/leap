@@ -53,7 +53,7 @@ ppu: 5
   )
 
 extra_service3 = ExtraService.create!(
-name: "Luggage Check",
+name: "Carry On Check",
 ppu: 15
   )
 
