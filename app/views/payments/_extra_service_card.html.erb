@@ -4,14 +4,14 @@
     <%= service.name %>
   </div>
   <div class="flex-button">
-    <%= link_to '', booking_extra_service_path(booking_service), method: :delete, class: "btn btn-primary",  remote: true%>
+    <%= link_to '', booking_extra_service_path(booking_service), method: :delete, class: "btn btn-success", id: "btn-circle",  remote: true%>
   </div>
 <% else %>
   <div class="flex-item">
     <%= service.name %>
   </div>
    <div class="flex-button">
-    <%= link_to '', booking_booking_extra_services_path(@booking, extra_service_id: service.id), method: :post, class: "btn btn-secondary", remote: true  %>
+    <%= link_to '', booking_booking_extra_services_path(@booking, extra_service_id: service.id), method: :post, class: "btn btn-danger", id: "btn-circle", remote: true  %>
   </div>
   <% end %>
 </div>
