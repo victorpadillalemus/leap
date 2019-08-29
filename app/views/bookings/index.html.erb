@@ -8,11 +8,14 @@
           <div class="booking-link">
             <h2><%= link_to booking.experience.title, booking_path(booking)%></h2>
           </div>
-          <p>Date: August 30th</p>
-          <br>
+            <div>
+              <p>Date: <%= booking.start_datetime.strftime("%d %B %Y") %></p>
+              <p>Arrival: <%= booking.experience.start_time %>:00</p>
+              <p>Departure: <%= booking.experience.end_time %>:00</p>
+            </div>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
-
 

@@ -95,9 +95,18 @@
 }
 
 .booking-link a {
-  color: black
+  color: black;
 }
 
 .booking-link :hover {
   color: black
 }
+
+.card-product-infos p {
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 2px;
+}
+
