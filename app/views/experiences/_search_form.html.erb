@@ -1,7 +1,6 @@
 <%= simple_form_for :home_search, url: filter_path, method: :get do |f| %>
-  <%= f.input :airport,
-    class: "search-bar",
-    placeholder: "Where is your layover?"
-  %>
+  <%= f.input :airport, label: false,
+              class: "search-bar",
+              placeholder: "Where is your layover?" %>
   <%= f.submit "Search", class: "primary-button" %>
 <% end %>
